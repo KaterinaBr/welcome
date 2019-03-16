@@ -1,0 +1,65 @@
+/*
+font-family: 'Walter Turncoat', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Amatic SC', cursive;
+*/
+
+
+body {
+  background-color: #f2b134;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+  font-weight: 400;
+  padding: 70px 20px 50px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+p {
+  font-family: 'Indie Flower', cursive;
+  margin: 20px auto;
+}
+
+.header {
+  height: 100vh;
+  background-color: #112f41;
+  margin: 0;
+
+}
+
+.welcome_section {
+    margin: 0;
+}
+
+.welcome_section h1 {
+  padding: calc( 100vh / 2 - 70px) 20px;
+}
+
+.my_container {
+  max-width: 800px;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.transport {
+  background-color: #b51a59;
+
+}
