@@ -11,16 +11,17 @@
 
   --font-walter: 'Walter Turncoat', cursive;
   --font-indie: 'Indie Flower', cursive;
-  /*--font-amatic: 'Amatic SC', cursive;*/
-  --font-amatic: BlackBetty;
+  --font-amatic: 'Amatic SC', cursive;
+  /*--font-amatic: BlackBetty;*/
 
-  --font-size-l: 3.1rem;
+  --font-size-l: 3.5rem;
   --font-size-m: 2rem;
   --font-size-text: 1.125rem;
   -font-size-text-m: 1.4rem;
 
-  --space-m:70px;
-  --margin-lr-sm:40px;
+  --space-m:4.4rem;
+  --space-s:2.5rem;
+  --margin-lr-sm:2.5rem;
 
 }
 
@@ -29,9 +30,10 @@
   src: url(font/BlackBetty.otf);
 }
 
+ /*--- GENERAL --- */
 
 body {
-  background-color: var(--color-yellow);
+  background-color: var(--color-darkblue);
   color: white;
   text-align: center;
   font-size: var(--font-size-text);
@@ -81,6 +83,9 @@ a:hover {
 .space-m {
   height: var(--space-m);
 }
+.space-s {
+  height: var(--space-s);
+}
 
 .header {
   /*height: 100vh;*/
@@ -89,22 +94,25 @@ a:hover {
 
 }
 
-.welcome {
-    margin: 0;
-}
-
-.welcome h1 {
-  padding: calc( 100vh / 2 - 70px) var(--margin-lr-sm);
-}
-
 .my_container {
   min-height: 100vh;
 }
 .inner_container {
   max-width: 800px;
   margin: auto;
-
 }
+
+ /*--- WELCOME SECTION ---*/
+
+.welcome {
+    /*margin: 0;*/
+}
+
+.welcome h1 {
+  padding: calc( 100vh / 2 - 70px) var(--margin-lr-sm);
+}
+
+ /*--- TRANSPORT SECTION ---*/
 
 .transport {
   background-color: var(--color-pink);
@@ -125,7 +133,8 @@ a:hover {
   margin: 0 10px;
 }
 
-.card_container {
+/*.card_container {*/
+.col-2-cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: left;
@@ -136,7 +145,8 @@ a:hover {
   margin-bottom: 40px;
 }
 
-.card_container > * {
+/*.card_container > * {*/
+.col-2-cont > * {
   margin: 0 var(--margin-lr-sm) 20px;
 }
 
@@ -159,9 +169,21 @@ a:hover {
 
 }
 
+/*--- FOOD SECTION ---*/
 .food {
   background-color: var(--color-blue);
 }
+
+ /*--- TRASH SECTION --- */
+.trash {
+  background-color: var(--color-yellow);
+}
+
+.bin_container img {
+  max-height: 300px;
+  margin:auto;
+}
+
 
 /* --- MEDIAS --- */
 
@@ -171,7 +193,8 @@ a:hover {
     margin-right: var(--margin-lr-sm);
   }
 
-  .card_container {
+  /*.card_container {*/
+  .col-2-cont {
     grid-template-columns: 1fr;
     text-align: right;
   }
