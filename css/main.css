@@ -112,6 +112,23 @@ a:hover {
   padding: calc( 100vh / 2 - 70px) var(--margin-lr-sm);
 }
 
+ /*--- MENU ---*/
+
+ .side_menu {
+   min-height: 100px;
+   /*width: 50px;*/
+   /*background-color: white;*/
+   position: fixed;
+   top: calc( 100vh/2 - 15rem);
+   right: 1rem;
+   text-align: right;
+
+ }
+
+ .side_menu ul {
+       list-style: none;
+ }
+
  /*--- TRANSPORT SECTION ---*/
 
 .transport {
