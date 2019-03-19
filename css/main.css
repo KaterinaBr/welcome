@@ -41,7 +41,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 img {
   margin: 0 var(--margin-lr-sm);
   /*width: 100%;*/
@@ -119,7 +121,7 @@ a:hover {
    /*width: 50px;*/
    /*background-color: white;*/
    position: fixed;
-   top: calc( 100vh/2 - 15rem);
+   top: calc( 100vh/4);
    right: 1rem;
    text-align: right;
 
