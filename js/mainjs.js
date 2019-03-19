@@ -36,11 +36,25 @@ function MainFunction() {
     if (current.length > 0) {
       current[0].className = current[0].className.replace(" active", "");
     }
-    if (btn != 0){
+    if (btn != 0) {
       btn.className += " active";
     }
   }
 
+ // --- CHANGE WELCOME ---
+  var text = ["Welcome to Greece", "Welcome to Athens", " Welcome to our place"];
+  var counter = 0;
+  var elem = document.getElementById("changeText");
+
+  window.setInterval(function() {
+      elem.innerHTML = text[counter];
+      counter++;
+      if (counter >= text.length) {
+        counter = 0;
+      }
+    }, 2000);
 
 
-}
+
+
+  }
