@@ -169,9 +169,10 @@ a:hover {
 
 /*.card_container {*/
 .col-2-cont {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   text-align: left;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .card_container img {
@@ -181,7 +182,8 @@ a:hover {
 
 /*.card_container > * {*/
 .col-2-cont > * {
-  margin: 0 var(--margin-lr-sm) 20px;
+  /*margin: 0 var(--margin-lr-sm) 20px;*/
+  max-width: 400px;
 }
 
 .sc2 img {
@@ -213,9 +215,14 @@ a:hover {
   background-color: var(--color-yellow);
 }
 
+.bin_container {
+  text-align: center;
+}
 .bin_container img {
   max-height: 300px;
-  margin:auto;
+  /*margin:auto;*/
+  width: auto;
+  margin: 0 20px 40px;
 }
 
 
