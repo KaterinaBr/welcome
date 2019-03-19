@@ -20,22 +20,25 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+  <script src="../welcome/js/mainjs.js"></script>
+
 
 </head>
 
-<body>
+<body onload="MainFunction()">
   <header class="header my_container">
     <div class="welcome inner_container">
       <h1> Welcome to Athens</h1>
     </div>
   </header>
 
-<div class="side_menu">
+<div class="side_menu" id="side_menu">
   <ul>
-    <li><a href="#transport"> transport   </a></li>
-    <li><a href="#food">      food        </a></li>
-    <li><a href="#trash">     trash       </a></li>
+    <li class="menu_btn"><a href="#transport"> transport   </a></li>
+    <li class="menu_btn"><a href="#food">      food        </a></li>
+    <li class="menu_btn"><a href="#trash">     trash       </a></li>
 </div>
+
 
 <!-- TRANSPORT -->
   <div class="transport my_container" id="transport">
