@@ -4,6 +4,7 @@ function MainFunction() {
 
   var transportoffset = document.getElementById("transport").offsetTop;
   var foodoffset = document.getElementById("food").offsetTop;
+  var drinksoffset = document.getElementById("drinks").offsetTop;
   var trashoffset = document.getElementById("trash").offsetTop;
 
   var btns = btnContainer.getElementsByClassName("menu_btn");
@@ -24,8 +25,11 @@ function MainFunction() {
     if (window.pageYOffset >= foodoffset - screen.height / 3) {
       SetActive(btns[1]);
     }
+  if (window.pageYOffset >= drinksoffset - screen.height / 3) {
+    SetActive(btns[2]);
+  }
     if (window.pageYOffset >= trashoffset - screen.height / 3) {
-      SetActive(btns[2]);
+      SetActive(btns[3]);
     }
   };
 

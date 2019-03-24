@@ -262,6 +262,12 @@ a:hover {
   flex: 1;
 }
 
+ /* --- DRINKS --- */
+
+ .drinks {
+  background-color: var(--color-purple);
+}
+
 
 
  /*--- TRASH SECTION --- */
