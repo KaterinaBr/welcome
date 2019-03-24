@@ -56,7 +56,7 @@ function MainFunction() {
       if (counter >= text.length) {
         counter = 0;
       }
-    }, 2000);
+    }, 1500);
 
 
 

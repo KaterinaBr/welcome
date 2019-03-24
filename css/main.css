@@ -159,6 +159,14 @@ a:hover {
    padding: 0;
 
  }
+ .side_menu a:hover {
+  border: none;
+ }
+
+ .side_menu a {
+   border: none;
+   transition: none;
+ }
 
  /*--- TRANSPORT SECTION ---*/
 
