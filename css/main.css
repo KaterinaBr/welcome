@@ -19,7 +19,7 @@
   --font-size-l: 3.5rem;
   --font-size-m: 2rem;
   --font-size-text: 1.125rem;
-  -font-size-text-m: 1.4rem;
+  --font-size-text-m: 1.4rem;
 
   --space-m:4.4rem;
   --space-s:2.5rem;
@@ -65,6 +65,11 @@ h2 {
   font-weight: 400;
   padding: 2.5rem var(--margin-lr-sm) 4rem;
   margin: 0 auto;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: var(--font-size-text);
 }
 
 p {
@@ -116,6 +121,15 @@ a:hover {
   max-width: 800px;
   margin: auto;
   padding: 1rem;
+}
+
+/* FLEX */
+.flex_container{
+  display: flex;
+  text-align: left;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
  /*--- WELCOME SECTION ---*/
@@ -189,13 +203,15 @@ a:hover {
   margin: 0 10px;
 }
 
-/*.card_container {*/
-.col-2-cont {
+/* .flex_container { */
+/* .col-2-cont {
   display: flex;
   text-align: left;
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
-}
+} */
+
 
 .card_container img {
   max-height: 160px;
@@ -277,6 +293,31 @@ a:hover {
 } */
 
 
+/*--- NATURE SECTION --- */
+.nature {
+  background-color: var(--color-purple);
+}
+
+
+
+.fruit_container img {
+  width: 75%;
+  margin: 0 auto 1rem;
+}
+
+.fruit_container{
+  text-align: center;
+  
+}
+
+
+.col-4-cont> * {
+  max-width: 180px;
+}
+
+.fruit_date {
+  opacity: 0.4;
+}
 
  /*--- TRASH SECTION --- */
 .trash {
@@ -297,10 +338,6 @@ a:hover {
   margin: 0 20px 40px;
 }
 
-/*--- NATURE SECTION --- */
-.nature {
-  background-color: var(--color-purple);
-}
 
 
 /* --- MEDIAS --- */
@@ -341,6 +378,13 @@ a:hover {
   }
   .gr_name {
     display: none;
+  }
+
+  .col-4-cont> * {
+    /*margin: 0 var(--margin-lr-sm) 20px;*/
+    max-width: 56%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 
 }
