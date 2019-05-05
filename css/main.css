@@ -228,7 +228,7 @@ a:hover {
 }
 
 /*--- FOOD SECTION ---*/
-.food {
+.cuisine {
   background-color: var(--color-blue);
 }
 
@@ -272,9 +272,9 @@ a:hover {
 
  /* --- DRINKS --- */
 
- .drinks {
+ /* .drinks {
   background-color: var(--color-purple);
-}
+} */
 
 
 
@@ -299,7 +299,7 @@ a:hover {
 
 /*--- NATURE SECTION --- */
 .nature {
-  background-color: var(--color-green);
+  background-color: var(--color-purple);
 }
 
 
