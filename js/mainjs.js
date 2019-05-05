@@ -1,42 +1,31 @@
 function MainFunction() {
 
   var btnContainer = document.getElementById("side_menu");
+  var menuContainer = document.getElementById("body");
 
-  var transportoffset = document.getElementById("transport").offsetTop;
-  var foodoffset = document.getElementById("food").offsetTop;
-  var drinksoffset = document.getElementById("drinks").offsetTop;
-  var trashoffset = document.getElementById("trash").offsetTop;
-
+  var menu_items = menuContainer.getElementsByClassName("menu_item");
   var btns = btnContainer.getElementsByClassName("menu_btn");
 
-  // for (var i = 0; i < btns.length; i++) {
-  //   btns[i].addEventListener("click", function() {
-  //     SetActive(this)
-  //   });
-  // }
 
   window.onscroll = function() {
-    if (window.pageYOffset < transportoffset - screen.height / 3) {
-      SetActive(0);
+    var firstoffset = document.getElementById("transport").offsetTop;
+
+    if (window.pageYOffset < firstoffset - screen.height / 3) {
+        SetActive(0);
     }
-    if (window.pageYOffset >= transportoffset - screen.height / 3) {
-      SetActive(btns[0]);
-    }
-    if (window.pageYOffset >= foodoffset - screen.height / 3) {
-      SetActive(btns[1]);
-    }
-  if (window.pageYOffset >= drinksoffset - screen.height / 3) {
-    SetActive(btns[2]);
-  }
-    if (window.pageYOffset >= trashoffset - screen.height / 3) {
-      SetActive(btns[3]);
+    else {
+      for (let i = 0; i < menu_items.length; i++) {
+        var offset = menu_items[i].offsetTop;
+        if (window.pageYOffset >= offset - screen.height / 3) {
+          SetActive(btns[i]);
+        }      
+      }
     }
   };
 
 
   function SetActive(btn) {
     var current = document.getElementsByClassName("active");
-
     if (current.length > 0) {
       current[0].className = current[0].className.replace(" active", "");
     }
@@ -56,7 +45,7 @@ function MainFunction() {
       if (counter >= text.length) {
         counter = 0;
       }
-    }, 1500);
+    }, 1200);
 
 
 

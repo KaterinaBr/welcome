@@ -2,7 +2,7 @@
 :root {
   --color-darkblue: #112f41;
   --color-blue: #0894a1;
-  --color-green: #47ab6c;
+  --color-green: #4a923a;
   --color-yellow: #f2b134;
   --color-orange: #ed553b;
   --color-pink: #b51a59;
@@ -221,7 +221,7 @@ a:hover {
 }
 .metro_img img {
   width: calc(100vw - var(--margin-lr-sm) * 2);
-  max-width: 660px;
+  max-width: 700px;
   margin: auto;
 
 
@@ -295,6 +295,11 @@ a:hover {
   /*margin:auto;*/
   width: auto;
   margin: 0 20px 40px;
+}
+
+/*--- NATURE SECTION --- */
+.nature {
+  background-color: var(--color-green);
 }
 
 

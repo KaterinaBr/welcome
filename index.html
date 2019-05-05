@@ -26,7 +26,7 @@
 
 </head>
 
-<body onload="MainFunction()">
+<body onload="MainFunction()" id="body">
   <header class="header my_container">
     <div class="welcome inner_container">
       <h1 id="changeText"> Welcome to Greece</h1>
@@ -39,11 +39,12 @@
     <li class="menu_btn"><a href="#food">      food        </a></li>
     <li class="menu_btn"><a href="#drinks">      drinks        </a></li>
     <li class="menu_btn"><a href="#trash">     trash       </a></li>
+    <li class="menu_btn"><a href="#nature">     nature       </a></li>
 </div>
 
 
 <!-- TRANSPORT -->
-  <div class="transport my_container" id="transport">
+  <div class="transport my_container menu_item" id="transport">
     <h1> Transport</h1>
     <div class="tickets inner_container">
       <h2> Tickets </h2>
@@ -60,12 +61,12 @@
           - Discount ticket: 0.60 euros / 90 minutes</br>
           - 24-hour ticket: 4.5 euros</br>
           - 5-day ticket: 9 euros</br>
-          -etc. </p>
+          - etc. </p>
       </div>
 
       <div class="space-m"> </div>
       <div class="show_card sc2">
-        <p>This card is for the citizens</p>
+        <p>This card is for citizens</p>
         <img src="img/arrow1.svg">
       </div>
       <div class="card_container col-2-cont cc2">
@@ -128,7 +129,7 @@ If you want to find one via an app, you can search for:</p>
   </div>
 
 <!---FOOD --->
-  <div class="food my_container" id="food">
+  <div class="food my_container menu_item" id="food">
     <h1> Food</h1>
     <div class="inner_container">
       <!-- <h2>Fast Food: Souvlaki </h2> -->
@@ -191,16 +192,65 @@ If you want to find one via an app, you can search for:</p>
   </div>
 
 <!-- DRINKS -->
-  <div class="drinks my_container" id="drinks">
+  <div class="drinks my_container menu_item" id="drinks">
     <h1> Drinks</h1>
     <div class="inner_container">
+        <div class="catalog">
+            <h2>A Very Greek Catalog </h2>
+            <ul>
+              <li>
+                <p class="category">CATEGORY </p>
+                <div class="lines l1"> </div>
+                <p class="en_name"> NAME </p>
+                <div class="lines l2"> </div>
+                <p class="gr_name"> GREEK NAME </p>
+              </li>  
+              <li>
+                <p class="category">Refreshment</p>
+                <div class="lines l1"> </div>
+                <p class="en_name"> Homemade Lemonade </p>
+                <div class="lines l2"> </div>
+                <p class="gr_name"> Σπιτική Λεμονάδα </p>
+              </li>
+              <li>
+                <p class="category"> Alcohol </p>
+                <div class="lines l1"> </div>
+                <p class="en_name"> Wine </p>
+                <div class="lines l2"> </div>
+                <p class="gr_name"> Κρασάκι </p>
+              </li>
+              <li>
+                <p class="category">Alcohol </p>
+                <div class="lines l1"> </div>
+                <p class="en_name"> Tsipouro </p>
+                <div class="lines l2"> </div>
+                <p class="gr_name"> Τσίπουρο </p>
+              </li>
+              <li>
+                <p class="category">Alcohol </p>
+                <div class="lines l1"> </div>
+                <p class="en_name"> Raki </p>
+                <div class="lines l2"> </div>
+                <p class="gr_name"> Ρακή </p>
+              </li>
+              <li>
+                <p class="category">Alcohol </p>
+                <div class="lines l1"> </div>
+                <p class="en_name"> Tsikoudia </p>
+                <div class="lines l2"> </div>
+                <p class="gr_name"> Τσικουδιά</p>
+              </li>
+            </ul>
+          </div>
+
+
        <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
      </div>
     <div class="space-m"></div>
   </div>
 
 <!-- TRASH -->
-  <div class="trash my_container" id="trash">
+  <div class="trash my_container menu_item" id="trash">
     <h1> Trash</h1>
     <div class="inner_container">
       <p>There are 2 basic types of rubbish bins.</br></br></p>
@@ -223,6 +273,26 @@ If you want to find one via an app, you can search for:</p>
     </div>
   </div>
 
+  <!-- NATURE -->
+  <div class="nature my_container menu_item" id="nature">
+    <h1> Nature</h1>
+    <div class="inner_container">
+      <h2>Fruits</h2>
+    </div>
+    <div class="space-m"></div>
+
+    <div class="inner_container">
+      <h2> Plants</h2>
+      <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
+    </div>
+    <div class="space-m"></div>
+
+    <div class="inner_container">
+      <h2> Mountains</h2>
+      <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
+    </div>
+    <div class="space-m"></div>
+  </div> 
     <!-- 
     <div class="gen my_container" id="General">
         <h1> Title</h1>
