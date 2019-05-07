@@ -350,6 +350,17 @@ a:hover {
     order:-1;
     justify-self: end;
   }
+
+
+  /* MENU */
+  .side_menu {
+    top: 0rem;
+    right: 1rem;
+  }
+  .side_menu ul {
+    display: flex;
+    margin: 0;
+  }
   
 
 }
@@ -360,6 +371,7 @@ a:hover {
     margin-left: var(--margin-lr-sm);
     margin-right: var(--margin-lr-sm);
   }
+
 
   /*.card_container {*/
   .col-2-cont {
