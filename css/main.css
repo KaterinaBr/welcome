@@ -27,6 +27,29 @@
 
 }
 
+.barkblue-bg {
+  background-color: var(--color-darkblue);
+}
+.blue-bg {
+  background-color: var(--color-blue);
+}
+.green-bg {
+  background-color: var(--color-green);
+}
+.yellow-bg {
+  background-color: var(--color-yellow);
+}
+.orange-bg {
+  background-color: var(--color-orange);
+}
+.pink-bg {
+  background-color: var(--color-pink);
+}
+.purple-bg {
+  background-color: var(--color-purple);
+}
+
+
 @font-face {
   font-family: BlackBetty;
   src: url(font/BlackBetty.otf);
@@ -123,6 +146,7 @@ a:hover {
   padding: 1rem;
 }
 
+
 /* FLEX */
 .flex_container{
   display: flex;
@@ -187,6 +211,8 @@ a:hover {
 .transport {
   background-color: var(--color-pink);
 }
+
+
 
 .show_card {
   width: 100%;
@@ -305,7 +331,7 @@ a:hover {
 
 
 .fruit_container img {
-  width: 75%;
+  width: 65%;
   margin: 0 auto 1rem;
 }
 
@@ -313,7 +339,6 @@ a:hover {
   text-align: center;
   
 }
-
 
 .col-4-cont> * {
   max-width: 180px;
@@ -355,7 +380,9 @@ a:hover {
   /* MENU */
   .side_menu {
     top: 0rem;
-    right: 1rem;
+    right: 0rem;
+    width: 100%;
+    min-height: 50px;
   }
   .side_menu ul {
     display: flex;
