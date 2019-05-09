@@ -176,6 +176,8 @@ a:hover {
    text-align: right;
    font-family: var(--font-amatic);
    font-size: 1.5rem;
+   opacity: 0.8;
+   border-radius: 8px;
 
  }
 
@@ -383,6 +385,7 @@ a:hover {
     right: 0rem;
     width: 100%;
     min-height: 50px;
+    border-radius: 0px;
   }
   .side_menu ul {
     display: flex;
