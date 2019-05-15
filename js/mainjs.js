@@ -9,6 +9,11 @@ function MainFunction() {
 
   window.onscroll = function() {
     var firstoffset = document.getElementById("transport").offsetTop;
+    if (screen.width > 700) {
+      var screenheight = screen.height / 3;
+    }
+    else { var screenheight = 50; }
+
     if (window.pageYOffset < firstoffset - screen.height / 3) {
         SetActive(0);
     }
@@ -21,8 +26,8 @@ function MainFunction() {
         else {
           var nextoffset = body.offsetHeight;
         }
-        if ((window.pageYOffset >= offset - screen.height / 3) && 
-            (window.pageYOffset < nextoffset - screen.height / 3)) {
+        if ((window.pageYOffset >= offset - screenheight) && 
+            (window.pageYOffset < nextoffset - screenheight)) {
               SetActive(btns[i]);
         }
       }      
