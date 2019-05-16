@@ -39,7 +39,6 @@ var menu = document.getElementById("side_menu");
   function SetActive(btn) {
     var current = document.getElementsByClassName("active");
     if (current.length > 0) {
-      console.log (current[0].firstChild.text);
       menu.className = menu.className.replace(" " + current[0].firstChild.text, "");
       current[0].className = current[0].className.replace(" active", "");
     }

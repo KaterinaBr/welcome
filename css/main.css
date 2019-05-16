@@ -271,8 +271,11 @@ a:hover {
   width: calc(100vw - var(--margin-lr-sm) * 2);
   max-width: 700px;
   margin: auto;
+}
 
-
+.btn_with_img img {
+  height: 1rem;
+  margin: 0 0.2rem;
 }
 
 /*--- FOOD SECTION ---*/
