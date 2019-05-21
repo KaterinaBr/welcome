@@ -27,27 +27,6 @@
 
 }
 
-.barkblue-bg {
-  background-color: var(--color-darkblue);
-}
-.blue-bg {
-  background-color: var(--color-blue);
-}
-.green-bg {
-  background-color: var(--color-green);
-}
-.yellow-bg {
-  background-color: var(--color-yellow);
-}
-.orange-bg {
-  background-color: var(--color-orange);
-}
-.pink-bg {
-  background-color: var(--color-pink);
-}
-.purple-bg {
-  background-color: var(--color-purple);
-}
 
 
 @font-face {
@@ -178,6 +157,7 @@ a:hover {
    font-size: 1.5rem;
    opacity: 0.9;
    border-radius: 8px;
+   transition: background-color 0.5s ease;
 
  }
 
