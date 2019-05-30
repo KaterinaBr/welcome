@@ -34,6 +34,7 @@ function MainFunction() {
     }
   };
 
+
 var menu = document.getElementById("side_menu");
 
   function SetActive(btn) {
