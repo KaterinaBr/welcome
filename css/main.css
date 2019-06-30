@@ -394,6 +394,14 @@ a:hover {
   margin: 0 20px 40px;
 }
 
+.trash_imgs img {
+  /* width: 100px; */
+  position: fixed;
+    /* top: calc(100vh/4);
+    left: -40px; */
+
+}
+
 
 
 /* --- MEDIAS --- */

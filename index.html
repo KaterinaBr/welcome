@@ -22,11 +22,12 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 
   <script src="../welcome/js/mainjs.js"></script>
+  <script src="../welcome/js/trash_game.js"></script>
 
 
 </head>
 
-<body onload="MainFunction()" id="body">
+<body onload="MainFunction()"  id="body">
   <header class="header my_container">
     <div class="welcome inner_container">
       <h1 id="changeText"> Welcome to Greece</h1>
@@ -380,16 +381,22 @@ If you want to find one via an app, you can search for:</p>
       <p>There are 2 basic types of rubbish bins.</br></br></p>
 
       <div class="col-2-cont bin_container flex_container">
-        <div class="green_bin">
+        <div class="green_bin" id="green_bin">
           <p> The first type is the green or silver bins. </br>
           Here, you can throw away every kind of trash - except the recyclable ones!</p>
           <img src="img/green_bin2.png">
         </div>
-        <div class="blue_bin">
+        <div class="blue_bin" id="blue_bin">
           <p> Second type, blue bins. </br>
             This is for recycling paper, metal, plastic, glass. </p>
           <img src="img/blue_bin.png">
         </div>
+      </div>
+
+      <div class="trash_imgs" id="trash_imgs">
+          <img class="tr_img" src="img/bottle-plastic.png">
+          <img class="tr_img" src="img/newspaper.png">
+          <img class="tr_img" src="img/tin_can.png">
       </div>
 
         <div class="space-m"></div>
