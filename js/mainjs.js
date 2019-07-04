@@ -73,51 +73,66 @@ var menu = document.getElementById("side_menu");
 
 
     blue_bin.addEventListener("click", showThing);
-
-
+    green_bin.addEventListener("click", showThing);
     // console.log("there i am!");
-
     // window.onscroll = function() {
-        
         for (let i = 0; i < tr_imgs.length; i++) {
-            tr_imgs[i].width = (50 + i*10);
+            tr_imgs[i].width = (50 );
         }
-
     // }
-
-    function showThing() {
+    function showThing(bin) {
       var r = Math.random()*(tr_imgs.length-1); 
       r = r.toFixed(0); 
       console.log (tr_imgs[r]);
+      // console.log(bin);
 
-
-      ThrowThing(tr_imgs[r]);
+      ThrowThing(tr_imgs[r],bin);
     }
 
-    function ThrowThing(thing) {
-          console.log("there i am!");
+
+    function ThrowThing(thing,bin) {
+      console.log("there i am!");
 
       var time = 0;
       var max_time=400;
-      var accx=2;
-      var accy = 2;
-      var posx=0;
-      var posy=200;
+          
+      var endx = bin.toElement.offsetLeft + (bin.toElement.offsetWidth/2) - thing.width;
+      var endy = bin.toElement.offsetTop-window.pageYOffset + thing.height - 20;
+      
+      var side = Math.floor(Math.random() *2);
+      if (side ==0) {  var startx = -50;  }
+      else {           var startx = screen.width; }
+      var starty = Math.floor(Math.random() * screen.height/2);
+
+      var dx = endx - startx;
+      var dy = endy - starty;
+      
+      var posx=startx;
+      var posy=starty;
+
+      var accy = 2.5;
+      var day = (accy*2) / max_time;
 
       var id = setInterval(frame, 5);
       function frame() {
         if (time == max_time) {
           clearInterval(id);
+          thing.style.left = screen.width +50 + "px"; 
+          thing.style.top = screen.height + 50 + "px"; 
         } else {
-          time++; 
-          accx-=0.01;
-          accy-=0.003;
-          posx +=accy;
-          posy -=accx;
+          var vx = dx / max_time;
+          posx += vx;
+          var vy = dy / max_time;
+          accy -= day;
+          posy += vy -accy;
+
           thing.style.left = posx + "px"; 
           thing.style.top = posy + "px"; 
+          time++; 
+
         }
       }
+
     }
 
   }
