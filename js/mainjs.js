@@ -69,22 +69,43 @@ var menu = document.getElementById("side_menu");
 
 
 
+ // --- MODAL ---
+
+var modal = document.getElementById("mapModal");
+var btn = document.getElementById("metro_img");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+
+
+
 // --- TRASH GAME ---
 
 
     blue_bin.addEventListener("click", showThing);
     green_bin.addEventListener("click", showThing);
     
-    // var onthemove;
     for (let i = 0; i < tr_imgs.length; i++) {
         tr_imgs[i].width = 50;
-        // onthemove[i] = false;
         tr_imgs[i].onthemove = false;
     }
     function showThing(bin) {
-      // console.log (tr_imgs[r]);
-      // console.log(bin);
-
       var t = tr_imgs.length+1;
       do {
         var r = Math.floor(Math.random()*(tr_imgs.length)); 
