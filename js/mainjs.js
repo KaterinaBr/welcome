@@ -8,7 +8,9 @@ function MainFunction() {
 
   // var trashimgs = document.getElementById("trash_imgs");
   var tr_imgs = document.getElementsByClassName("tr_img");
+  var tr_blue = document.getElementsByClassName("btr");
   var blue_bin = document.getElementById("blue_bin");
+  var green_bin = document.getElementById("green_bin");
 
 
   window.onscroll = function() {
@@ -92,9 +94,6 @@ window.onclick = function(event) {
 
 
 
-
-
-
 // --- TRASH GAME ---
 
 
@@ -107,8 +106,14 @@ window.onclick = function(event) {
     }
     function showThing(bin) {
       var t = tr_imgs.length+1;
+
       do {
-        var r = Math.floor(Math.random()*(tr_imgs.length)); 
+        if (bin.toElement.id == "blue_bin"){
+          var r = Math.floor(Math.random()*(tr_blue.length)); 
+        }
+        else{
+          var r = tr_blue.length + Math.floor(Math.random()*(tr_imgs.length -tr_blue.length)); 
+        }
         t--;
       }
       while (tr_imgs[r].onthemove && t >= 0);
@@ -119,7 +124,6 @@ window.onclick = function(event) {
       }
     }
 
-
     function ThrowThing(thing,bin) {
       // console.log("there i am!");
 
@@ -127,7 +131,7 @@ window.onclick = function(event) {
       var max_time=300;
           
       var endx = bin.toElement.offsetLeft + (bin.toElement.offsetWidth/2) - thing.width;
-      var endy = bin.toElement.offsetTop-window.pageYOffset + thing.height - 30;
+      var endy = bin.toElement.offsetTop-window.pageYOffset + thing.height - 25;
       
       var side = Math.floor(Math.random() *2);
       if (side ==0) {  var startx = -50;  }
@@ -137,9 +141,6 @@ window.onclick = function(event) {
       thing.style.visibility = "visible";
       thing.style.left = startx + "px"; 
       thing.style.top = starty + "px"; 
-
-      var dx = endx - startx;
-      var dy = endy - starty;
       
       var posx=startx;
       var posy=starty;
@@ -154,15 +155,13 @@ window.onclick = function(event) {
       function frame() {
         if (time == max_time) {
           clearInterval(id);
-          // thing.style.left = screen.width +50 + "px"; 
-          // thing.style.top = screen.height + 50 + "px"; 
           thing.style.visibility = "hidden";
           thing.onthemove = false;
 
         } else {
-          var vx = dx / max_time;
+          var vx = (endx - startx) / max_time;
           posx += vx;
-          var vy = dy / max_time;
+          var vy = (endy - starty) / max_time;
           accy -= day;
           posy += vy -accy;
 

@@ -86,6 +86,7 @@ p {
   max-width: var(--max-w-p);
   letter-spacing: 0.05rem;
   line-height: 1.3;
+  cursor: default;
 }
 
 a {
@@ -458,7 +459,7 @@ a:hover {
 }
 
 
-.bin:hover {
+.bins:hover {
   box-shadow: 0 0 19px #da9b22;
   border-radius: 10px;
 }
