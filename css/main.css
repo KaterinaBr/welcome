@@ -96,7 +96,8 @@ a {
   /* padding: calc(0.5rem + 1px); */
   padding: 0.4rem 0.8rem 0.3rem;
   transition: border 0.2s;
-  margin: auto;
+  margin: 0.5rem auto;
+  background-color: #ffffff20;
 }
 a:hover {
   color: var(--color-almost-white);
@@ -119,10 +120,7 @@ a:hover {
 }
 
 .header {
-  /*height: 100vh;*/
   background-color: var(--color-darkblue);
-  /*margin: 0;*/
-
 }
 
 .my_container {
@@ -178,6 +176,7 @@ a:hover {
 .side_menu a {
   border: none;
   transition: none;
+  background-color: #00000000;
 }
 
  /*--- WELCOME SECTION ---*/
@@ -186,7 +185,33 @@ a:hover {
   background-color: var(--color-darkblue);
 }
 .welcome h1 {
-  padding: calc( 100vh / 2 - 4rem) var(--margin-lr-sm);
+  padding: calc( 92vh / 2 - 4rem) var(--margin-lr-sm);
+}
+
+.arrow_down {
+  display: block;
+  /* width: 5rem; */
+  height: 5vh;
+  width: 60px;
+  margin-bottom: 3vh;
+  margin: auto;
+  fill: white;
+  margin-top: 0vh;
+  transition: all 0.3s ease;
+  
+}
+
+.arrow_down:hover {
+  fill: #ffffff55;
+  fill: #ffffff55;
+  margin-top: 2vh;
+}
+.btn_down {
+  border: none;
+  padding: 0;
+}
+.btn_down:hover {
+  border: none;
 }
 
  /*--- TRANSPORT SECTION ---*/
@@ -208,15 +233,6 @@ a:hover {
 .show_card p {
   margin: 0 10px;
 }
-
-/* .flex_container { */
-/* .col-2-cont {
-  display: flex;
-  text-align: left;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: space-around;
-} */
 
 .hover_scale {
   box-shadow: 0 -0 15px #00000000;
@@ -283,7 +299,7 @@ a:hover {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 5% auto; 
   padding: 0px;
   width: 95%; /* Could be more or less, depending on screen size */
 }
@@ -427,23 +443,25 @@ a:hover {
   text-align: center;
 }
 .bin_container p {
-  min-height: 80px;
+  min-height: 110px;
+  padding: 10px 12px;
 }
 .bin_container img {
   max-height: 300px;
-  /*margin:auto;*/
   width: auto;
   margin: 0 20px 40px;
+  cursor: pointer;
 }
 
 .trash_imgs img {
-  /* width: 100px; */
   position: fixed;
-    /* top: calc(100vh/4);
-    left: -40px; */
-
 }
 
+
+.bin:hover {
+  box-shadow: 0 0 19px #da9b22;
+  border-radius: 10px;
+}
 
 
 /* --- MEDIAS --- */
@@ -472,6 +490,11 @@ a:hover {
   p {
     margin-left: var(--margin-lr-sm);
     margin-right: var(--margin-lr-sm);
+  }
+
+  a {
+    border: 1px solid var(--color-almost-white);
+    border-radius: 4px;
   }
 
   .cc2 .reverse_this {
@@ -525,6 +548,13 @@ a:hover {
   .gr_name {
     display: none;
   }
+
+  /*--- SHOPPING SECTION --- */
+  .shopping p, .sub-p {
+    text-align: center;
+    justify-self: center;
+  }
+
 
 
 }
