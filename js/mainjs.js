@@ -80,11 +80,9 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
 }
-
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -93,9 +91,7 @@ window.onclick = function(event) {
 
 
 
-
-// --- TRASH GAME ---
-
+// --- TRASH MINI GAME ---
 
     blue_bin.addEventListener("click", showThing);
     green_bin.addEventListener("click", showThing);
@@ -131,7 +127,7 @@ window.onclick = function(event) {
       var max_time=300;
           
       var endx = bin.toElement.offsetLeft + (bin.toElement.offsetWidth/2) - thing.width;
-      var endy = bin.toElement.offsetTop-window.pageYOffset + thing.height - 25;
+      var endy = bin.toElement.offsetTop - window.pageYOffset + thing.height - 25;
       
       var side = Math.floor(Math.random() *2);
       if (side ==0) {  var startx = -50;  }
