@@ -327,9 +327,13 @@ a:hover {
 }
 
 
-.btn_with_img img {
+.btn_with_img img, .btn_with_img svg {
   height: 1rem;
   margin: 0 0.2rem;
+}
+.btn_with_img svg {
+  width: 1rem;
+  fill: white;
 }
 
 /*--- FOOD SECTION ---*/
@@ -436,6 +440,30 @@ a:hover {
   opacity: 0.4;
 }
 
+.grass {
+  fill: white;
+  opacity: 0.2;
+  width: 5rem;
+  height: 4rem;
+  margin-bottom: -0.7rem;
+}
+
+.repeat-grass {
+  background-image: url(../img/grass.svg);
+  background-repeat: repeat-x;
+  height: 7rem;
+  width: 100%;
+  opacity: 0.1;
+  background-size: contain;
+  margin-bottom: -0.1rem;
+}
+.repeat-grass svg {
+  fill: white;
+}
+
+.testgrr {
+  height: 20rem;
+}
  /*--- TRASH SECTION --- */
 .trash {
   background-color: var(--color-yellow);
