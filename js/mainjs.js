@@ -13,7 +13,19 @@ function MainFunction() {
   var green_bin = document.getElementById("green_bin");
 
 
+
+
   window.onscroll = function() {
+
+    // MENU --------
+    OnscrollSetActive();
+
+    // MOVE TAXI -------
+    MoveTaxi ();
+
+  };
+
+  function OnscrollSetActive() {
     var firstoffset = document.getElementById("transport").offsetTop;
     if (screen.width > 700) {
       var screenheight = screen.height / 3;
@@ -38,11 +50,8 @@ function MainFunction() {
         }
       }      
     }
-  };
-
-
-var menu = document.getElementById("side_menu");
-
+  }
+  var menu = document.getElementById("side_menu");
 
   function SetActive(btn) {
     var current = document.getElementsByClassName("active");
@@ -72,7 +81,6 @@ var menu = document.getElementById("side_menu");
 
 
  // --- MODAL ---
-
 var modal = document.getElementById("mapModal");
 var btn = document.getElementById("metro_img");
 var span = document.getElementsByClassName("close")[0];
@@ -89,6 +97,19 @@ window.onclick = function(event) {
   }
 }
 
+
+// --- MOVING CAR ---
+function MoveTaxi() {
+
+  var taxi = document.getElementById('taxi');
+  var offset = taxi.offsetTop;
+
+  if ((pageYOffset <= offset + 20) && (pageYOffset >= offset - window.innerHeight - 20)) {
+    var taxileft = (pageYOffset - offset + window.innerHeight) * window.innerWidth / window.innerHeight;
+    taxi.style.left = taxileft + 'px';
+
+  }
+}
 
 
 // --- TRASH MINI GAME ---

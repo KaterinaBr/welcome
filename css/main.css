@@ -336,6 +336,17 @@ a:hover {
   fill: white;
 }
 
+.taxi {
+  width: 6rem;
+  height: 6rem;
+  fill: white;
+  opacity: 0.3;
+  transform: scaleX(-1);
+}
+.taxi_div {
+  position: absolute;
+}
+
 /*--- FOOD SECTION ---*/
 .cuisine {
   background-color: var(--color-blue);
