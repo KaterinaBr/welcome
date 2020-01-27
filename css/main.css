@@ -59,6 +59,7 @@ body, html{
 
 .site{
   overflow-x: hidden;
+  display:relative;
 }
 
 html {
