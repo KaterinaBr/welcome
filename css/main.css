@@ -158,19 +158,20 @@ a:hover {
   z-index: 1;
 }
 .side_menu ul {
-      list-style: none;
+  list-style: none;
+  padding: 0;
 }
 .side_menu li {
   padding: 0.35rem 0;
 }
-.side_menu li:hover {
+/* .side_menu li:hover {
   font-size: 2rem;
   padding: 0;
-}
-.side_menu .active {
+} */
+/* .side_menu .active {
   font-size: 2rem;
   padding: 0;
-}
+} */
 .side_menu a:hover {
  border: none;
 }
@@ -178,6 +179,53 @@ a:hover {
   border: none;
   transition: none;
   background-color: #00000000;
+}
+
+.menu_icon {
+  fill: white;
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.2s ease;
+}
+
+.side_menu li:hover .menu_icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.side_menu .active .menu_icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.menu_btn .menu_tooltip {
+  visibility: hidden;
+  width: 160%;
+  background-color: #0000009e;
+  color: #fff;
+  text-align: center;
+  padding: 5px 1rem;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  right: 100%;
+  /* margin-left: -60px; */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu_btn .menu_tooltip::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #0000009e;
+}
+
+.menu_btn:hover .menu_tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
  /*--- WELCOME SECTION ---*/
@@ -345,6 +393,7 @@ a:hover {
 }
 .taxi_div {
   position: absolute;
+  
 }
 
 /*--- FOOD SECTION ---*/
@@ -521,6 +570,11 @@ a:hover {
     margin: 0;
     justify-content: center;
     padding: 0;
+  }
+
+  .menu_btn:hover .menu_tooltip {
+    visibility: hidden;
+    opacity: 0;
   }
 
 }
