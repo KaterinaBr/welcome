@@ -103,11 +103,10 @@ function MoveTaxi() {
 
   var taxi = document.getElementById('taxi');
   var offset = taxi.offsetTop;
-
-  if ((pageYOffset <= offset + 20) && (pageYOffset >= offset - window.innerHeight - 20)) {
-    var taxileft = (pageYOffset - offset + window.innerHeight) * window.innerWidth / window.innerHeight;
+  if ((pageYOffset <= offset + 0) && (pageYOffset >= offset - window.innerHeight + 0)) {
+    var taxileft = (pageYOffset - offset + window.innerHeight - 0) * window.innerWidth / (window.innerHeight - 0);
     taxi.style.left = taxileft + 'px';
-
+    
   }
 }
 
