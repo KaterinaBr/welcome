@@ -57,6 +57,10 @@ body, html{
   overflow-x: hidden;
 }
 
+.site{
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }

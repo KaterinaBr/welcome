@@ -24,559 +24,561 @@
 </head>
 
 <body onload="MainFunction()"  id="body">
+  <div class="site">
 
-  <svg  xmlns="http://www.w3.org/2000/svg" style="display: none;">
-	
-    <symbol id="oasa_icon" viewBox="0 0 40 37">
-      <path d="M39.9,0H18.5C8.3,0,0,8.3,0,18.5S8.3,37,18.5,37c3.4,0,6.6-0.9,9.5-2.7V37h9V18.5c0-3.4-0.9-6.6-2.7-9.5h5.5V0z M28,18.5
-        c0,5.2-4.3,9.5-9.5,9.5S9,23.7,9,18.5S13.3,9,18.5,9C23.7,9,28,13.3,28,18.5z"/>
-    </symbol>
-  
-    <symbol id="arrow_down" viewBox="0 0 50 30">
-      <polygon points="25,28.1 0.6,3.7 2.4,1.9 25,24.5 47.6,1.9 49.4,3.7 	"/>
-    </symbol>
-    <symbol id="grass" viewBox="0 0 50 40">
-      <path d="M50,10.9c-1.1-1.7-1.2-2.5-5.5-8.1c1.6,3.7,3.4,8.1,4.6,15c-1.5-1.2-3.3-5.4-7.2-6.3c3.1,3.2,4.5,9.1,5.4,15.8
-		c-1.9-2.6-3.3-5.8-5.6-8.4c6.4,11.6-7.3,18.3,0.7-5.9c-2.2,2.8-4.6,6.1-6.7,11.6c-1.1-5.3-1.7-10-0.4-17.6
-		c-2.8,5.9-5.2,13.9-4.7,22.4c-1.6-7.1-2.2-16.1-0.6-24.7c-2.8,6.1-5.4,14-6,22.4C22.7,22,23.3,15.3,24.7,8c-1.2,2.3-2.7,5-4.3,9.7
-		c-1.3-2.4-3.7-6-6.5-8.7c0.4-2,0.1-2.2,1.9-9.1c-1.9,3.5-4.9,10.3-6.4,16.8c-0.7-2.4-1.7-5.7-3.8-9.5c-0.2-0.4,1.9,7.3,0.2,16.9
-		C4.3,19,0.8,14.4,1,6.5c0,0.3-0.1,0-1,4.6C0.1,11,0,11,0,10.9l0,28.4h50V10.9z M15.1,29c-2.4-5-1.9-11.7-1.4-18.9
-		C14.5,10.7,22.1,30.1,15.1,29z"/>
-    </symbol>
-    <symbol id="car" viewBox="0 0 538.043 538.043">
-      <path d="M526.745,312.866h-15.005c-3.706-18.736-10.307-44.359-20.792-57.941c-49.022-63.573-110.574-97.697-187.945-97.697   
-      c-50.134,0-82.787,4.902-99.789,14.981c-2.295,1.363-9.063,5.369-27.344,42.135c-26.687,0.419-97.278,5.261-131.127,43.414   
-      c-16.99,19.143-23.746,39.719-26.352,55.096h-7.078C5.058,312.854,0,317.924,0,324.177c0,6.241,5.058,11.323,11.311,11.323h5.655   
-      c0.048,0.61,0.096,1.076,0.108,1.219c0.598,5.739,5.464,10.115,11.239,10.115h14.252c8.752,19.968,28.66,33.981,51.831,33.981   
-      s43.079-14.013,51.855-33.981h215.982c8.74,19.968,28.66,33.981,51.832,33.981c23.172,0,43.091-14.013,51.832-33.981h38.165   
-      c0.084,0,0.155,0,0.215,0c6.253,0,11.335-5.07,11.335-11.323h11.131c6.241,0,11.299-5.081,11.299-11.323   
-      C538.044,317.924,532.986,312.866,526.745,312.866z M94.397,358.169c-18.724,0-33.968-15.232-33.968-33.981   
-      c0-18.748,15.232-33.992,33.968-33.992c18.748,0,34.004,15.245,34.004,33.992C128.402,342.937,113.145,358.169,94.397,358.169z    
-      M295.183,226.433c0,3.133-2.523,5.667-5.667,5.667h-87.964c-1.937,0-3.742-1.016-4.783-2.666   
-      c-1.052-1.662-1.148-3.731-0.287-5.476c4.149-8.537,11.67-23.327,15.269-26.4c11.981-7.616,36.001-11.227,72.002-11.227   
-      c1.961,0,3.922,0.024,5.906,0.06c3.061,0.072,5.512,2.595,5.512,5.667L295.183,226.433L295.183,226.433z M306.53,226.433V193.66   
-      c0-1.614,0.705-3.157,1.901-4.233c1.208-1.076,2.81-1.614,4.424-1.399c39.863,4.687,70.519,17.875,82.058,35.272   
-      c1.16,1.746,1.244,3.97,0.263,5.811c-0.968,1.841-2.905,2.989-4.998,2.989h-78.004C309.077,232.1,306.53,229.565,306.53,226.433z    
-      M414.067,358.169c-18.724,0-33.98-15.232-33.98-33.981c0-18.748,15.244-33.992,33.98-33.992c18.736,0,33.98,15.245,33.98,33.992   
-      C448.047,342.937,432.791,358.169,414.067,358.169z"/>
-    </symbol>
-    <symbol id="transport-icon" viewBox="0 0 32 28">
+    
+    <svg  xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    
+      <symbol id="oasa_icon" viewBox="0 0 40 37">
+        <path d="M39.9,0H18.5C8.3,0,0,8.3,0,18.5S8.3,37,18.5,37c3.4,0,6.6-0.9,9.5-2.7V37h9V18.5c0-3.4-0.9-6.6-2.7-9.5h5.5V0z M28,18.5
+          c0,5.2-4.3,9.5-9.5,9.5S9,23.7,9,18.5S13.3,9,18.5,9C23.7,9,28,13.3,28,18.5z"/>
+      </symbol>
+    
+      <symbol id="arrow_down" viewBox="0 0 50 30">
+        <polygon points="25,28.1 0.6,3.7 2.4,1.9 25,24.5 47.6,1.9 49.4,3.7 	"/>
+      </symbol>
+      <symbol id="grass" viewBox="0 0 50 40">
+        <path d="M50,10.9c-1.1-1.7-1.2-2.5-5.5-8.1c1.6,3.7,3.4,8.1,4.6,15c-1.5-1.2-3.3-5.4-7.2-6.3c3.1,3.2,4.5,9.1,5.4,15.8
+      c-1.9-2.6-3.3-5.8-5.6-8.4c6.4,11.6-7.3,18.3,0.7-5.9c-2.2,2.8-4.6,6.1-6.7,11.6c-1.1-5.3-1.7-10-0.4-17.6
+      c-2.8,5.9-5.2,13.9-4.7,22.4c-1.6-7.1-2.2-16.1-0.6-24.7c-2.8,6.1-5.4,14-6,22.4C22.7,22,23.3,15.3,24.7,8c-1.2,2.3-2.7,5-4.3,9.7
+      c-1.3-2.4-3.7-6-6.5-8.7c0.4-2,0.1-2.2,1.9-9.1c-1.9,3.5-4.9,10.3-6.4,16.8c-0.7-2.4-1.7-5.7-3.8-9.5c-0.2-0.4,1.9,7.3,0.2,16.9
+      C4.3,19,0.8,14.4,1,6.5c0,0.3-0.1,0-1,4.6C0.1,11,0,11,0,10.9l0,28.4h50V10.9z M15.1,29c-2.4-5-1.9-11.7-1.4-18.9
+      C14.5,10.7,22.1,30.1,15.1,29z"/>
+      </symbol>
+      <symbol id="car" viewBox="0 0 538.043 538.043">
+        <path d="M526.745,312.866h-15.005c-3.706-18.736-10.307-44.359-20.792-57.941c-49.022-63.573-110.574-97.697-187.945-97.697   
+        c-50.134,0-82.787,4.902-99.789,14.981c-2.295,1.363-9.063,5.369-27.344,42.135c-26.687,0.419-97.278,5.261-131.127,43.414   
+        c-16.99,19.143-23.746,39.719-26.352,55.096h-7.078C5.058,312.854,0,317.924,0,324.177c0,6.241,5.058,11.323,11.311,11.323h5.655   
+        c0.048,0.61,0.096,1.076,0.108,1.219c0.598,5.739,5.464,10.115,11.239,10.115h14.252c8.752,19.968,28.66,33.981,51.831,33.981   
+        s43.079-14.013,51.855-33.981h215.982c8.74,19.968,28.66,33.981,51.832,33.981c23.172,0,43.091-14.013,51.832-33.981h38.165   
+        c0.084,0,0.155,0,0.215,0c6.253,0,11.335-5.07,11.335-11.323h11.131c6.241,0,11.299-5.081,11.299-11.323   
+        C538.044,317.924,532.986,312.866,526.745,312.866z M94.397,358.169c-18.724,0-33.968-15.232-33.968-33.981   
+        c0-18.748,15.232-33.992,33.968-33.992c18.748,0,34.004,15.245,34.004,33.992C128.402,342.937,113.145,358.169,94.397,358.169z    
+        M295.183,226.433c0,3.133-2.523,5.667-5.667,5.667h-87.964c-1.937,0-3.742-1.016-4.783-2.666   
+        c-1.052-1.662-1.148-3.731-0.287-5.476c4.149-8.537,11.67-23.327,15.269-26.4c11.981-7.616,36.001-11.227,72.002-11.227   
+        c1.961,0,3.922,0.024,5.906,0.06c3.061,0.072,5.512,2.595,5.512,5.667L295.183,226.433L295.183,226.433z M306.53,226.433V193.66   
+        c0-1.614,0.705-3.157,1.901-4.233c1.208-1.076,2.81-1.614,4.424-1.399c39.863,4.687,70.519,17.875,82.058,35.272   
+        c1.16,1.746,1.244,3.97,0.263,5.811c-0.968,1.841-2.905,2.989-4.998,2.989h-78.004C309.077,232.1,306.53,229.565,306.53,226.433z    
+        M414.067,358.169c-18.724,0-33.98-15.232-33.98-33.981c0-18.748,15.244-33.992,33.98-33.992c18.736,0,33.98,15.245,33.98,33.992   
+        C448.047,342.937,432.791,358.169,414.067,358.169z"/>
+      </symbol>
+      <symbol id="transport-icon" viewBox="0 0 32 28">
+        <path
+        d="M6.67,24.31h.74c0,1.88.23,3.5,2.05,3.5s2-1.5,2-3.5h9c0,1.94.23,3.5,2.09,3.5s1.88-1.18,1.9-3.5h.83a1.74,1.74,0,0,0,1.74-1.6c.58-6.83,1.33-18.59-.24-20.54-1.37-1.7-8.28-2-12.15-2-3,0-8.32.38-9.53,2C3.59,4.3,4.34,16,4.93,22.72A1.74,1.74,0,0,0,6.67,24.31Zm3.08,2a.61.61,0,0,1-.29,0c-.26,0-.5,0-.54-2H10C10,25.76,9.85,26.19,9.75,26.27Zm13.12,0a.68.68,0,0,1-.26,0c-.33,0-.55,0-.59-2h1A7,7,0,0,1,22.87,26.28ZM6.36,3.09c.38-.51,2.92-1.29,8.35-1.39h1c5.23,0,9.37.72,9.94,1.42.84,1,.8,9.05-.08,19.48a.26.26,0,0,1-.25.22H6.67a.25.25,0,0,1-.24-.22C5.51,12.1,5.48,4.26,6.36,3.09Z" />
+        <path
+        d="M7.38,12.68H24.62l.05-.68c.56-6.42-.22-7.07-.47-7.28-1.42-1.18-14.75-1.56-16.34,0-.61.59-.79,3-.53,7.26ZM8.94,5.77C10.31,5,21.6,5,23.18,5.84a22.24,22.24,0,0,1,.05,5.34H8.79A23.83,23.83,0,0,1,8.94,5.77Z" />
       <path
-      d="M6.67,24.31h.74c0,1.88.23,3.5,2.05,3.5s2-1.5,2-3.5h9c0,1.94.23,3.5,2.09,3.5s1.88-1.18,1.9-3.5h.83a1.74,1.74,0,0,0,1.74-1.6c.58-6.83,1.33-18.59-.24-20.54-1.37-1.7-8.28-2-12.15-2-3,0-8.32.38-9.53,2C3.59,4.3,4.34,16,4.93,22.72A1.74,1.74,0,0,0,6.67,24.31Zm3.08,2a.61.61,0,0,1-.29,0c-.26,0-.5,0-.54-2H10C10,25.76,9.85,26.19,9.75,26.27Zm13.12,0a.68.68,0,0,1-.26,0c-.33,0-.55,0-.59-2h1A7,7,0,0,1,22.87,26.28ZM6.36,3.09c.38-.51,2.92-1.29,8.35-1.39h1c5.23,0,9.37.72,9.94,1.42.84,1,.8,9.05-.08,19.48a.26.26,0,0,1-.25.22H6.67a.25.25,0,0,1-.24-.22C5.51,12.1,5.48,4.26,6.36,3.09Z" />
-      <path
-      d="M7.38,12.68H24.62l.05-.68c.56-6.42-.22-7.07-.47-7.28-1.42-1.18-14.75-1.56-16.34,0-.61.59-.79,3-.53,7.26ZM8.94,5.77C10.31,5,21.6,5,23.18,5.84a22.24,22.24,0,0,1,.05,5.34H8.79A23.83,23.83,0,0,1,8.94,5.77Z" />
-     <path
-      d="M22.6,16h0a2.33,2.33,0,0,0-2.35,1.85,2.35,2.35,0,0,0,1.85,2.52,2.29,2.29,0,0,0,.52.05,2.58,2.58,0,0,0,1.56-.53,2.08,2.08,0,0,0,.88-1.55,2.13,2.13,0,0,0-.6-1.53A2.62,2.62,0,0,0,22.6,16Zm.67,2.7a1.06,1.06,0,0,1-.84.2c-.37-.08-.76-.46-.7-.82s.55-.58.86-.58a1.11,1.11,0,0,1,.77.34.64.64,0,0,1,.19.42A.64.64,0,0,1,23.27,18.71Z" />
-      <path
-      d="M9.77,16.2A2.36,2.36,0,0,0,8,16.69a1.81,1.81,0,0,0-.71,1.24,2.25,2.25,0,0,0,1.89,2.31l.24,0A2.26,2.26,0,0,0,11,19.63a2.07,2.07,0,0,0,.7-1.61A2.16,2.16,0,0,0,9.77,16.2ZM10,18.53a.74.74,0,0,1-.53.23.81.81,0,0,1-.6-.67A.34.34,0,0,1,9,17.87a.91.91,0,0,1,.53-.18h.08c.26,0,.58.27.59.43A.59.59,0,0,1,10,18.53Z" />
-      <path
-      d="M17.71,16c-.67,0-1.33,0-2,0s-1.29,0-1.94,0a.75.75,0,0,0-.07,1.5c.66,0,1.33,0,2,.05s1.3,0,1.94,0h0a.75.75,0,0,0,0-1.5Z" />
-      <path
-      d="M17.61,19.05h0c-.64,0-1.27,0-1.9-.05s-1.32-.05-2-.05a.76.76,0,0,0-.75.76.75.75,0,0,0,.75.74h0c.63,0,1.27,0,1.9.05s1.22.05,1.82.05h.15a.75.75,0,0,0,0-1.5Z" />
-    </symbol>
-    <symbol id="cuisine-icon" viewBox="0 0 32 28">
-      <path
-      d="M15.33,9.17c-1.38-.53-4.24-1.63-7.1,1.17-1.16,1.13-1.7,2.93-1.58,5.22.22,3.89,2.28,8.28,4,9.61a5.26,5.26,0,0,0,3.3,1.14,6.32,6.32,0,0,0,2.25-.43c1.91.47,5.55.42,7.26-2.83,2.77-5.25,2.5-11.36-.6-13.62A5.68,5.68,0,0,0,17.21,9a10.59,10.59,0,0,1,2.62-3.52A.75.75,0,1,0,19,4.19a9.55,9.55,0,0,0-2.31,2.67A10.66,10.66,0,0,0,16,3.92c-.68-1.51-3.64-2.11-4.23-2.21l-.66-.12-.19.64c-.09.29-.83,2.89.5,4.46s3.92,1.53,4.5,1.54a9,9,0,0,0-.44,1ZM12.55,5.72a3.16,3.16,0,0,1-.36-2.38,4.43,4.43,0,0,1,2.43,1.2,8.57,8.57,0,0,1,.52,2.14A4.3,4.3,0,0,1,12.55,5.72ZM22,10.64c2.48,1.81,2.55,7.17.15,11.71-1.67,3.16-5.61,2.07-5.78,2l-.28-.08-.26.13A4.22,4.22,0,0,1,11.56,24c-1.39-1.09-3.22-5.13-3.41-8.51a5.37,5.37,0,0,1,1.13-4.07A4.37,4.37,0,0,1,12.39,10a6.72,6.72,0,0,1,2.4.57,4.24,4.24,0,0,0,1,.29l0,0H16a3.94,3.94,0,0,0,1.31-.36C18.52,10.05,20.23,9.38,22,10.64Z" />
-      <path
-      d="M19.68,13.1a2.22,2.22,0,0,1,1,2.37.75.75,0,0,0,.62.86l.12,0a.75.75,0,0,0,.74-.63,3.62,3.62,0,0,0-1.95-4,.75.75,0,0,0-1,.47A.74.74,0,0,0,19.68,13.1Z" />
+        d="M22.6,16h0a2.33,2.33,0,0,0-2.35,1.85,2.35,2.35,0,0,0,1.85,2.52,2.29,2.29,0,0,0,.52.05,2.58,2.58,0,0,0,1.56-.53,2.08,2.08,0,0,0,.88-1.55,2.13,2.13,0,0,0-.6-1.53A2.62,2.62,0,0,0,22.6,16Zm.67,2.7a1.06,1.06,0,0,1-.84.2c-.37-.08-.76-.46-.7-.82s.55-.58.86-.58a1.11,1.11,0,0,1,.77.34.64.64,0,0,1,.19.42A.64.64,0,0,1,23.27,18.71Z" />
+        <path
+        d="M9.77,16.2A2.36,2.36,0,0,0,8,16.69a1.81,1.81,0,0,0-.71,1.24,2.25,2.25,0,0,0,1.89,2.31l.24,0A2.26,2.26,0,0,0,11,19.63a2.07,2.07,0,0,0,.7-1.61A2.16,2.16,0,0,0,9.77,16.2ZM10,18.53a.74.74,0,0,1-.53.23.81.81,0,0,1-.6-.67A.34.34,0,0,1,9,17.87a.91.91,0,0,1,.53-.18h.08c.26,0,.58.27.59.43A.59.59,0,0,1,10,18.53Z" />
+        <path
+        d="M17.71,16c-.67,0-1.33,0-2,0s-1.29,0-1.94,0a.75.75,0,0,0-.07,1.5c.66,0,1.33,0,2,.05s1.3,0,1.94,0h0a.75.75,0,0,0,0-1.5Z" />
+        <path
+        d="M17.61,19.05h0c-.64,0-1.27,0-1.9-.05s-1.32-.05-2-.05a.76.76,0,0,0-.75.76.75.75,0,0,0,.75.74h0c.63,0,1.27,0,1.9.05s1.22.05,1.82.05h.15a.75.75,0,0,0,0-1.5Z" />
+      </symbol>
+      <symbol id="cuisine-icon" viewBox="0 0 32 28">
+        <path
+        d="M15.33,9.17c-1.38-.53-4.24-1.63-7.1,1.17-1.16,1.13-1.7,2.93-1.58,5.22.22,3.89,2.28,8.28,4,9.61a5.26,5.26,0,0,0,3.3,1.14,6.32,6.32,0,0,0,2.25-.43c1.91.47,5.55.42,7.26-2.83,2.77-5.25,2.5-11.36-.6-13.62A5.68,5.68,0,0,0,17.21,9a10.59,10.59,0,0,1,2.62-3.52A.75.75,0,1,0,19,4.19a9.55,9.55,0,0,0-2.31,2.67A10.66,10.66,0,0,0,16,3.92c-.68-1.51-3.64-2.11-4.23-2.21l-.66-.12-.19.64c-.09.29-.83,2.89.5,4.46s3.92,1.53,4.5,1.54a9,9,0,0,0-.44,1ZM12.55,5.72a3.16,3.16,0,0,1-.36-2.38,4.43,4.43,0,0,1,2.43,1.2,8.57,8.57,0,0,1,.52,2.14A4.3,4.3,0,0,1,12.55,5.72ZM22,10.64c2.48,1.81,2.55,7.17.15,11.71-1.67,3.16-5.61,2.07-5.78,2l-.28-.08-.26.13A4.22,4.22,0,0,1,11.56,24c-1.39-1.09-3.22-5.13-3.41-8.51a5.37,5.37,0,0,1,1.13-4.07A4.37,4.37,0,0,1,12.39,10a6.72,6.72,0,0,1,2.4.57,4.24,4.24,0,0,0,1,.29l0,0H16a3.94,3.94,0,0,0,1.31-.36C18.52,10.05,20.23,9.38,22,10.64Z" />
+        <path
+        d="M19.68,13.1a2.22,2.22,0,0,1,1,2.37.75.75,0,0,0,.62.86l.12,0a.75.75,0,0,0,.74-.63,3.62,3.62,0,0,0-1.95-4,.75.75,0,0,0-1,.47A.74.74,0,0,0,19.68,13.1Z" />
 
-    </symbol>
-    <symbol id="trash-icon" viewBox="0 0 32 28">
-      <path
-      d="M23.93,5.54c-2-.86-16.23-1.17-18-.12-1.28.78-1.08,7.9.59,21.17l.09.65H23.21l.1-.63C26.49,6.62,24.63,5.84,23.93,5.54Zm-2,20.2H8c-1-8.5-1.74-17.69-1.14-19.07,1.7-.67,14.42-.5,16.44.23C24.07,8.14,23.22,17.46,21.93,25.74Z" />
-  <path
-      d="M26.33,3.61a67.26,67.26,0,0,0-7.82-1.32,5.72,5.72,0,0,0,.14-.67.75.75,0,1,0-1.48-.22,5.44,5.44,0,0,1-.17.7,72.53,72.53,0,0,0-9.6-.62.76.76,0,0,0-.71.79.79.79,0,0,0,.8.71A100.34,100.34,0,0,1,25.94,5.06a.63.63,0,0,0,.19,0,.75.75,0,0,0,.2-1.48Z" />
-  <path
-      d="M9.87,7.53a.75.75,0,0,0-.69.81C9.31,10.11,10.28,24,10.28,24l1.49-.11s-1-13.89-1.1-15.67A.74.74,0,0,0,9.87,7.53Z" />
-  <path
-      d="M15.07,7.53h0a.75.75,0,0,0-.75.73c0,1.51-.13,15.1-.13,15.68a.76.76,0,0,0,.75.76h0a.76.76,0,0,0,.75-.75c0-.14.09-14.16.13-15.65A.74.74,0,0,0,15.07,7.53Z" />
-  <path
-      d="M19.67,7.53a.74.74,0,0,0-.8.69c-.21,2.69-.54,15.18-.55,15.71a.74.74,0,0,0,.73.76h0a.76.76,0,0,0,.75-.73c0-.13.34-13,.55-15.64A.75.75,0,0,0,19.67,7.53Z" />
+      </symbol>
+      <symbol id="trash-icon" viewBox="0 0 32 28">
+        <path
+        d="M23.93,5.54c-2-.86-16.23-1.17-18-.12-1.28.78-1.08,7.9.59,21.17l.09.65H23.21l.1-.63C26.49,6.62,24.63,5.84,23.93,5.54Zm-2,20.2H8c-1-8.5-1.74-17.69-1.14-19.07,1.7-.67,14.42-.5,16.44.23C24.07,8.14,23.22,17.46,21.93,25.74Z" />
+    <path
+        d="M26.33,3.61a67.26,67.26,0,0,0-7.82-1.32,5.72,5.72,0,0,0,.14-.67.75.75,0,1,0-1.48-.22,5.44,5.44,0,0,1-.17.7,72.53,72.53,0,0,0-9.6-.62.76.76,0,0,0-.71.79.79.79,0,0,0,.8.71A100.34,100.34,0,0,1,25.94,5.06a.63.63,0,0,0,.19,0,.75.75,0,0,0,.2-1.48Z" />
+    <path
+        d="M9.87,7.53a.75.75,0,0,0-.69.81C9.31,10.11,10.28,24,10.28,24l1.49-.11s-1-13.89-1.1-15.67A.74.74,0,0,0,9.87,7.53Z" />
+    <path
+        d="M15.07,7.53h0a.75.75,0,0,0-.75.73c0,1.51-.13,15.1-.13,15.68a.76.76,0,0,0,.75.76h0a.76.76,0,0,0,.75-.75c0-.14.09-14.16.13-15.65A.74.74,0,0,0,15.07,7.53Z" />
+    <path
+        d="M19.67,7.53a.74.74,0,0,0-.8.69c-.21,2.69-.54,15.18-.55,15.71a.74.74,0,0,0,.73.76h0a.76.76,0,0,0,.75-.73c0-.13.34-13,.55-15.64A.75.75,0,0,0,19.67,7.53Z" />
 
-    </symbol>
-    <symbol id="nature-icon" viewBox="0 0 32 28">
-      <path
-      d="M3.79,6.46a2,2,0,0,0,.88-.2C6.4,7.92,9.24,13,10.09,17.2c-1.84-2.26-3.64-4-3.79-4.2a.75.75,0,0,0-1.25.74c0,.08,2.24,8.11,0,12.84a.75.75,0,0,0,.36,1,.74.74,0,0,0,.32.07.76.76,0,0,0,.68-.43C8.06,23.76,7.6,19,7.08,16c2.24,2.48,5.21,6.17,5.62,8.39a.76.76,0,0,0,.87.61.75.75,0,0,0,.6-.87A9.9,9.9,0,0,0,12.8,21c1.61-3.88.52-8.6-.32-11.16,1.65,1,4,2.83,4.39,5.41a.38.38,0,0,0,.05.15s0,.07,0,.09a.55.55,0,0,0,.13.17l0,0a.88.88,0,0,0,.23.14h.07a.58.58,0,0,0,.18,0h.1l.08,0,.15-.05a.53.53,0,0,0,.1-.06.4.4,0,0,0,.12-.1l.07-.08a.55.55,0,0,0,.08-.15,1,1,0,0,0,0-.1v0A9,9,0,0,1,22.8,9.14c-1.2,2.33-2.92,6.33-2.85,9.92v.05a9.31,9.31,0,0,0,.21,1.76.75.75,0,0,0,1.46-.33,8.11,8.11,0,0,1-.16-1.41c.75-2,4.26-3.34,6.67-4-1.31,2.53-3.67,7.72-2.84,11a.77.77,0,0,0,.73.57l.19,0a.76.76,0,0,0,.54-.92C26,22.66,29,16.56,30.22,14.46a.75.75,0,0,0,0-.8.77.77,0,0,0-.75-.32c-.26.05-5,.88-7.76,3.13A29.81,29.81,0,0,1,25.18,8a.75.75,0,0,0,0-.85.77.77,0,0,0-.8-.27,11.32,11.32,0,0,0-6,4.53A11,11,0,0,1,21.58,4a2,2,0,1,0-.85-1.64,2.21,2.21,0,0,0,0,.37c-2.23,1.81-3.66,5.07-4,8.8a14.49,14.49,0,0,0-5.43-4,.74.74,0,0,0-1,1c0,.06,2.53,5.78,1.42,10.51-.2-4.71-3.66-11.5-6.12-13.87a2,2,0,0,0,.18-.84A2.12,2.12,0,1,0,3.79,6.46Zm19-4.6a.52.52,0,0,1,.52.52.52.52,0,0,1-.52.53.53.53,0,0,1-.53-.53A.52.52,0,0,1,22.76,1.86Zm-19,1.87a.61.61,0,0,1,.61.62A.61.61,0,0,1,3.79,5a.61.61,0,0,1-.62-.61A.62.62,0,0,1,3.79,3.73Z" />
+      </symbol>
+      <symbol id="nature-icon" viewBox="0 0 32 28">
+        <path
+        d="M3.79,6.46a2,2,0,0,0,.88-.2C6.4,7.92,9.24,13,10.09,17.2c-1.84-2.26-3.64-4-3.79-4.2a.75.75,0,0,0-1.25.74c0,.08,2.24,8.11,0,12.84a.75.75,0,0,0,.36,1,.74.74,0,0,0,.32.07.76.76,0,0,0,.68-.43C8.06,23.76,7.6,19,7.08,16c2.24,2.48,5.21,6.17,5.62,8.39a.76.76,0,0,0,.87.61.75.75,0,0,0,.6-.87A9.9,9.9,0,0,0,12.8,21c1.61-3.88.52-8.6-.32-11.16,1.65,1,4,2.83,4.39,5.41a.38.38,0,0,0,.05.15s0,.07,0,.09a.55.55,0,0,0,.13.17l0,0a.88.88,0,0,0,.23.14h.07a.58.58,0,0,0,.18,0h.1l.08,0,.15-.05a.53.53,0,0,0,.1-.06.4.4,0,0,0,.12-.1l.07-.08a.55.55,0,0,0,.08-.15,1,1,0,0,0,0-.1v0A9,9,0,0,1,22.8,9.14c-1.2,2.33-2.92,6.33-2.85,9.92v.05a9.31,9.31,0,0,0,.21,1.76.75.75,0,0,0,1.46-.33,8.11,8.11,0,0,1-.16-1.41c.75-2,4.26-3.34,6.67-4-1.31,2.53-3.67,7.72-2.84,11a.77.77,0,0,0,.73.57l.19,0a.76.76,0,0,0,.54-.92C26,22.66,29,16.56,30.22,14.46a.75.75,0,0,0,0-.8.77.77,0,0,0-.75-.32c-.26.05-5,.88-7.76,3.13A29.81,29.81,0,0,1,25.18,8a.75.75,0,0,0,0-.85.77.77,0,0,0-.8-.27,11.32,11.32,0,0,0-6,4.53A11,11,0,0,1,21.58,4a2,2,0,1,0-.85-1.64,2.21,2.21,0,0,0,0,.37c-2.23,1.81-3.66,5.07-4,8.8a14.49,14.49,0,0,0-5.43-4,.74.74,0,0,0-1,1c0,.06,2.53,5.78,1.42,10.51-.2-4.71-3.66-11.5-6.12-13.87a2,2,0,0,0,.18-.84A2.12,2.12,0,1,0,3.79,6.46Zm19-4.6a.52.52,0,0,1,.52.52.52.52,0,0,1-.52.53.53.53,0,0,1-.53-.53A.52.52,0,0,1,22.76,1.86Zm-19,1.87a.61.61,0,0,1,.61.62A.61.61,0,0,1,3.79,5a.61.61,0,0,1-.62-.61A.62.62,0,0,1,3.79,3.73Z" />
 
-    </symbol>
-    <symbol id="street-icon" viewBox="0 0 32 28">
-      <path
-      d="M6.73,12.7a.73.73,0,0,0-.79.71c-.76,13-.06,13.42.41,13.68.86.47,9.38.65,9.47.65l2.75,0c6.38,0,6.77-.56,7-.9.81-1.14.42-8.93.12-13.47a.75.75,0,0,0-1.5.1c.36,5.35.51,11.35.19,12.41-1.83.68-15.11.24-17.15-.1-.25-1.34-.11-7.13.19-12.32A.76.76,0,0,0,6.73,12.7Z" />
-  <path
-      d="M25,.58C24.74.43,24,0,7.42.46H7.06L6.85.76C4.39,4,.26,9.66.26,11c0,.85.4,1,5.41,1.2,2.73.09,6.39.15,10.33.15,15.74,0,15.74-.48,15.74-1.35C31.74,9.22,25.9,1.19,25,.58ZM2,10.48A83.44,83.44,0,0,1,7.83,2C15.05,1.73,23,1.64,24.2,1.87a55.77,55.77,0,0,1,5.87,8.6C26.16,11,6,11,2,10.48Z" />
-  <path
-      d="M8.54,21.13a1.83,1.83,0,0,0-.33,2.43c.18.23.66.84,8.45.84h0c6.11,0,6.47-.45,6.71-.75.75-.95.12-2.18-.36-2.75a.75.75,0,1,0-1.15,1,1.74,1.74,0,0,1,.36.76c-1.64.42-11.08.35-12.87-.09a1.09,1.09,0,0,1,.22-.36.75.75,0,0,0-1.07-1Z" />
-  <path
-      d="M16.8,20.85h.14c4.11,0,4.3-.21,4.55-.47.64-.69.64-5.7,0-6.39-.25-.27-.43-.46-4.61-.46h-.1c-6.3,0-6.54.26-6.74.47-.44.47-.44,5.9,0,6.38C10.22,20.57,10.49,20.85,16.8,20.85Zm-5.55-5.69a86.73,86.73,0,0,1,9.11,0,18.92,18.92,0,0,1,0,4.12,86.77,86.77,0,0,1-9.11,0C11.19,18.26,11.19,16.11,11.25,15.16Z" />
-  <path
-      d="M22.08,3.43a.75.75,0,0,0-1.4.55c.4,1,1.78,5.1,1.79,5.14a.76.76,0,0,0,.71.51,1,1,0,0,0,.24,0,.74.74,0,0,0,.47-.95C23.84,8.47,22.49,4.47,22.08,3.43Z" />
-  <path d="M11.25,3a.76.76,0,0,0-1,.41C9.9,4.3,8.09,8.59,8.09,8.59l1.39.58L11.65,4A.75.75,0,0,0,11.25,3Z" />
-  <path
-      d="M15.69,3a.74.74,0,0,0-.71.78s.2,4,.2,5.14a.75.75,0,1,0,1.5,0c0-1.2-.2-5.05-.21-5.21A.75.75,0,0,0,15.69,3Z" />
+      </symbol>
+      <symbol id="street-icon" viewBox="0 0 32 28">
+        <path
+        d="M6.73,12.7a.73.73,0,0,0-.79.71c-.76,13-.06,13.42.41,13.68.86.47,9.38.65,9.47.65l2.75,0c6.38,0,6.77-.56,7-.9.81-1.14.42-8.93.12-13.47a.75.75,0,0,0-1.5.1c.36,5.35.51,11.35.19,12.41-1.83.68-15.11.24-17.15-.1-.25-1.34-.11-7.13.19-12.32A.76.76,0,0,0,6.73,12.7Z" />
+    <path
+        d="M25,.58C24.74.43,24,0,7.42.46H7.06L6.85.76C4.39,4,.26,9.66.26,11c0,.85.4,1,5.41,1.2,2.73.09,6.39.15,10.33.15,15.74,0,15.74-.48,15.74-1.35C31.74,9.22,25.9,1.19,25,.58ZM2,10.48A83.44,83.44,0,0,1,7.83,2C15.05,1.73,23,1.64,24.2,1.87a55.77,55.77,0,0,1,5.87,8.6C26.16,11,6,11,2,10.48Z" />
+    <path
+        d="M8.54,21.13a1.83,1.83,0,0,0-.33,2.43c.18.23.66.84,8.45.84h0c6.11,0,6.47-.45,6.71-.75.75-.95.12-2.18-.36-2.75a.75.75,0,1,0-1.15,1,1.74,1.74,0,0,1,.36.76c-1.64.42-11.08.35-12.87-.09a1.09,1.09,0,0,1,.22-.36.75.75,0,0,0-1.07-1Z" />
+    <path
+        d="M16.8,20.85h.14c4.11,0,4.3-.21,4.55-.47.64-.69.64-5.7,0-6.39-.25-.27-.43-.46-4.61-.46h-.1c-6.3,0-6.54.26-6.74.47-.44.47-.44,5.9,0,6.38C10.22,20.57,10.49,20.85,16.8,20.85Zm-5.55-5.69a86.73,86.73,0,0,1,9.11,0,18.92,18.92,0,0,1,0,4.12,86.77,86.77,0,0,1-9.11,0C11.19,18.26,11.19,16.11,11.25,15.16Z" />
+    <path
+        d="M22.08,3.43a.75.75,0,0,0-1.4.55c.4,1,1.78,5.1,1.79,5.14a.76.76,0,0,0,.71.51,1,1,0,0,0,.24,0,.74.74,0,0,0,.47-.95C23.84,8.47,22.49,4.47,22.08,3.43Z" />
+    <path d="M11.25,3a.76.76,0,0,0-1,.41C9.9,4.3,8.09,8.59,8.09,8.59l1.39.58L11.65,4A.75.75,0,0,0,11.25,3Z" />
+    <path
+        d="M15.69,3a.74.74,0,0,0-.71.78s.2,4,.2,5.14a.75.75,0,1,0,1.5,0c0-1.2-.2-5.05-.21-5.21A.75.75,0,0,0,15.69,3Z" />
 
-    </symbol>
+      </symbol>
 
-  </svg>
+    </svg>
 
-  <!-- <svg><use xlink:href="#car"/></svg> -->
+    <!-- <svg><use xlink:href="#car"/></svg> -->
 
-  
-  <!-- HEADER -->
+    
+    <!-- HEADER -->
 
-  <header class="header my_container">
-    <div class="welcome inner_container">
-      <h1 id="changeText"> Welcome to Greece</h1>
-      <a rel="nofollow" class="btn_down" href="#transport">  
-        <svg class="arrow_down"><use xlink:href="#arrow_down"/></svg>
-      </a>
-      <!-- <svg class="arrow_down"><use xlink:href="#arrow_down"/></svg> -->
-      <!-- <svg class="arrow_down"><use xlink:href="img/sprite.svg #arrow_down"/></svg> -->
-    </div>
-  </header>
+    <header class="header my_container">
+      <div class="welcome inner_container">
+        <h1 id="changeText"> Welcome to Greece</h1>
+        <a rel="nofollow" class="btn_down" href="#transport">  
+          <svg class="arrow_down"><use xlink:href="#arrow_down"/></svg>
+        </a>
+        <!-- <svg class="arrow_down"><use xlink:href="#arrow_down"/></svg> -->
+        <!-- <svg class="arrow_down"><use xlink:href="img/sprite.svg #arrow_down"/></svg> -->
+      </div>
+    </header>
 
 
-<!-- MENU -->
+  <!-- MENU -->
 
-<div class="side_menu" id="side_menu">
-  <ul>
-    <li class="menu_btn"><a href="#transport"> 
-      <!-- transport   -->
-      <svg class="menu_icon"><use xlink:href="#transport-icon"/></svg>
-      <span class="menu_tooltip"> transport</span>
-    </a></li>
-    <li class="menu_btn"><a href="#cuisine">
-      <!-- cuisine         -->
-        <svg class="menu_icon"><use xlink:href="#cuisine-icon"/></svg>
-        <span class="menu_tooltip"> cuisine</span>
-    </a></li>
-    <li class="menu_btn"><a href="#shopping">
-      <!-- street shopping        -->
-        <svg class="menu_icon"><use xlink:href="#street-icon"/></svg>
-        <span class="menu_tooltip"> street shopping</span>
-       </a></li>
-    <li class="menu_btn"><a href="#nature">
-      <!-- nature        -->
-        <svg class="menu_icon"><use xlink:href="#nature-icon"/></svg>
-        <span class="menu_tooltip"> nature</span>
+  <div class="side_menu" id="side_menu">
+    <ul>
+      <li class="menu_btn"><a href="#transport"> 
+        <!-- transport   -->
+        <svg class="menu_icon"><use xlink:href="#transport-icon"/></svg>
+        <span class="menu_tooltip"> transport</span>
       </a></li>
-    <li class="menu_btn"><a href="#trash">
-      <!-- trash bins        -->
-        <svg class="menu_icon"><use xlink:href="#trash-icon"/></svg>
-        <span class="menu_tooltip"> trash bins </span>
+      <li class="menu_btn"><a href="#cuisine">
+        <!-- cuisine         -->
+          <svg class="menu_icon"><use xlink:href="#cuisine-icon"/></svg>
+          <span class="menu_tooltip"> cuisine</span>
       </a></li>
-</div>
+      <li class="menu_btn"><a href="#shopping">
+        <!-- street shopping        -->
+          <svg class="menu_icon"><use xlink:href="#street-icon"/></svg>
+          <span class="menu_tooltip"> street shopping</span>
+        </a></li>
+      <li class="menu_btn"><a href="#nature">
+        <!-- nature        -->
+          <svg class="menu_icon"><use xlink:href="#nature-icon"/></svg>
+          <span class="menu_tooltip"> nature</span>
+        </a></li>
+      <li class="menu_btn"><a href="#trash">
+        <!-- trash bins        -->
+          <svg class="menu_icon"><use xlink:href="#trash-icon"/></svg>
+          <span class="menu_tooltip"> trash bins </span>
+        </a></li>
+  </div>
 
 
-<!-- TRANSPORT -->
-  <div class="transport my_container menu_item" id="transport">
-    <h1> Transport</h1>
-    <div class="tickets inner_container">
-      <h2> Tickets </h2>
+  <!-- TRANSPORT -->
+    <div class="transport my_container menu_item" id="transport">
+      <h1> Transport</h1>
+      <div class="tickets inner_container">
+        <h2> Tickets </h2>
 
-      <div class="show_card">
-        <img src="img/arrow1.svg">
-        <p>This card is for you</p>
+        <div class="show_card">
+          <img src="img/arrow1.svg">
+          <p>This card is for you</p>
+        </div>
+        <div class="card_container flex_container col-2-cont">
+          <img class="hover_scale" src="img/white_card.jpg">
+          <p>You buy it once and you can top it up again - so don’t throw them!</br>
+            You can get in the metro lines 1,2,3, buses and trolleys. </br>
+            - Normal ticket: 1.40 euros / 90 minutes</br>
+            - Discount ticket: 0.60 euros / 90 minutes</br>
+            - 24-hour ticket: 4.5 euros</br>
+            - 5-day ticket: 9 euros</br>
+            - etc. </p>
+        </div>
+
+        <div class="space-m"> </div>
+        <div class="show_card sc2">
+          <p>This card is for citizens</p>
+          <img src="img/arrow1.svg">
+        </div>
+        <div class="card_container flex_container col-2-cont cc2">
+          <!-- <div></div> -->
+          <p>The card has its owner name. </br>
+            You can pay per month/year etc.</p>
+          <img class="reverse_this hover_scale" src="img/blue_card.jpg">
+        </div>
+        <div class="abtn">
+          <a target="_blank" href="https://www.athenstransport.com/english/tickets/">More info here</a>
+        </div>
       </div>
-      <div class="card_container flex_container col-2-cont">
-        <img class="hover_scale" src="img/white_card.jpg">
-        <p>You buy it once and you can top it up again - so don’t throw them!</br>
-          You can get in the metro lines 1,2,3, buses and trolleys. </br>
-          - Normal ticket: 1.40 euros / 90 minutes</br>
-          - Discount ticket: 0.60 euros / 90 minutes</br>
-          - 24-hour ticket: 4.5 euros</br>
-          - 5-day ticket: 9 euros</br>
-          - etc. </p>
+
+      <!-- <div class="space-m"> </div> -->
+
+      <div class="metrolines inner_container">
+
+        <h2> Metro Lines </h2>
+
+        <p> Here in Athens there are 3 metro lines: </br>
+          M1, Green line / Pireaus - Kifissia</br>
+          M2, Red line / Anthoupoli - Elliniko</br>
+          M3, Blue line / Agia Marina - Airport
+        </p>
+        <div class="abtn">
+          <a rel="nofollow" target="_blank" class="btn_with_img" href="https://www.athenstransport.com/english/">  <img src="img/oasa_icon.svg">
+            More info here </a>
+        </div>
       </div>
 
-      <div class="space-m"> </div>
-      <div class="show_card sc2">
-        <p>This card is for citizens</p>
-        <img src="img/arrow1.svg">
+  
+      <div id="mapModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="img/Athens_Metro_Map.svg">
+        </div>
+      
       </div>
-      <div class="card_container flex_container col-2-cont cc2">
-        <!-- <div></div> -->
-        <p>The card has its owner name. </br>
-          You can pay per month/year etc.</p>
-        <img class="reverse_this hover_scale" src="img/blue_card.jpg">
-      </div>
-      <div class="abtn">
-        <a target="_blank" href="https://www.athenstransport.com/english/tickets/">More info here</a>
-      </div>
-    </div>
 
-    <!-- <div class="space-m"> </div> -->
-
-    <div class="metrolines inner_container">
-
-      <h2> Metro Lines </h2>
-
-      <p> Here in Athens there are 3 metro lines: </br>
-        M1, Green line / Pireaus - Kifissia</br>
-        M2, Red line / Anthoupoli - Elliniko</br>
-        M3, Blue line / Agia Marina - Airport
-      </p>
-      <div class="abtn">
-        <a rel="nofollow" target="_blank" class="btn_with_img" href="https://www.athenstransport.com/english/">  <img src="img/oasa_icon.svg">
-          More info here </a>
-      </div>
-    </div>
-
- 
-    <div id="mapModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
+      <div class="metro_img" id="metro_img">
         <img src="img/Athens_Metro_Map.svg">
       </div>
-    
-    </div>
-
-    <div class="metro_img" id="metro_img">
-      <img src="img/Athens_Metro_Map.svg">
-    </div>
-    <div class="metrolines">
-      <div class="space-m"></div>
-    </div>
-
-
-    <div class="buses inner_container">
-      <h2> Buses </h2>
-      <p> Too many! </br></br>
-        For example, at Ano Patissia you may find useful the buses 3, 5, 11, 14, 500, A8. </br>
-        So, there is an app and a website to help you with that:</br>
-      </p>
-
-      <!-- <svg class="testicon"><use xlink:href="img/sprite.svg#oasa_icon1"/></svg> -->
-
-      <div class="abtn">
-        <a rel="nofollow" class="btn_with_img" target="_blank" href="http://telematics.oasa.gr/en/#main"><svg><use xlink:href="#oasa_icon"/></svg> Oasa Telematics</a>
-      </div>
-      <!-- <div class="space-m"></div> -->
-    </div>
-    <div class="taxis inner_container">
-      <h2> Taxis </h2>
-      <p> They are everywhere. </br> </br>
-        You can call a taxi in this number: </br>18180. </br></br>
-
-If you want to find one via an app, you can search for:</p>
-      <div class="abtn">
-        <a target="_blank" class="btn_with_img" href="https://thebeat.co/en/?intl=1"> <img src="img/beat_logo.svg"> app</a>
+      <div class="metrolines">
+        <div class="space-m"></div>
       </div>
 
-      <div class="taxi_div" id="taxi">
-          <svg class="taxi" ><use xlink:href="#car"/></svg>
-      </div>
-      <div class="space-m"></div>
 
-      <div class="space-m"></div>
+      <div class="buses inner_container">
+        <h2> Buses </h2>
+        <p> Too many! </br></br>
+          For example, at Ano Patissia you may find useful the buses 3, 5, 11, 14, 500, A8. </br>
+          So, there is an app and a website to help you with that:</br>
+        </p>
+
+        <!-- <svg class="testicon"><use xlink:href="img/sprite.svg#oasa_icon1"/></svg> -->
+
+        <div class="abtn">
+          <a rel="nofollow" class="btn_with_img" target="_blank" href="http://telematics.oasa.gr/en/#main"><svg><use xlink:href="#oasa_icon"/></svg> Oasa Telematics</a>
+        </div>
+        <!-- <div class="space-m"></div> -->
+      </div>
+      <div class="taxis inner_container">
+        <h2> Taxis </h2>
+        <p> They are everywhere. </br> </br>
+          You can call a taxi in this number: </br>18180. </br></br>
+
+  If you want to find one via an app, you can search for:</p>
+        <div class="abtn">
+          <a target="_blank" class="btn_with_img" href="https://thebeat.co/en/?intl=1"> <img src="img/beat_logo.svg"> app</a>
+        </div>
+
+        <div class="taxi_div" id="taxi">
+            <svg class="taxi" ><use xlink:href="#car"/></svg>
+        </div>
+        <div class="space-m"></div>
+
+        <div class="space-m"></div>
+      </div>
+
     </div>
 
-  </div>
-
-<!-- ---- CUISINE ---- -->
-  <div class="cuisine my_container menu_item" id="cuisine">
-    <h1> Cuisine</h1>
-    <div class="food inner_container">
-        <!---FOOD --->
-      <h2>Food</h2>
-      <!-- <h2>Fast Food: Souvlaki </h2> -->
-      <div class="catalog">
-        <h2>A Very Greek Catalog </h2>
-        <ul>
-          <li>
-            <p class="category">CATEGORY </p>
-            <div class="lines l1"> </div>
-            <p class="en_name"> NAME </p>
-            <div class="lines l2"> </div>
-            <p class="gr_name"> GREEK NAME </p>
-          </li>  
-          <li>
-            <p class="category">Fast food </p>
-            <div class="lines l1"> </div>
-            <p class="en_name"> Souvlaki </p>
-            <div class="lines l2"> </div>
-            <p class="gr_name"> Σουβλάκι </p>
-          </li>
-          <li>
-            <p class="category"> Mum's cuisine </p>
-            <div class="lines l1"> </div>
-            <p class="en_name"> Mousakas </p>
-            <div class="lines l2"> </div>
-            <p class="gr_name"> Μουσακάς </p>
-          </li>
-          <li>
-            <p class="category">Salad </p>
-            <div class="lines l1"> </div>
-            <p class="en_name"> Greek Salad </p>
-            <div class="lines l2"> </div>
-            <p class="gr_name"> Χωριάτικη </p>
-          </li>
-          <li>
-            <p class="category">Sauce </p>
-            <div class="lines l1"> </div>
-            <p class="en_name"> Tzatziki </p>
-            <div class="lines l2"> </div>
-            <p class="gr_name"> Τζατζίκι </p>
-          </li>
-          <li>
-            <p class="category">Sweet </p>
-            <div class="lines l1"> </div>
-            <p class="en_name"> Loukoumades </p>
-            <div class="lines l2"> </div>
-            <p class="gr_name"> Λουκουμάδες</p>
-          </li>
-        </ul>
-      </div>
-      <p> The Very Greek Catalog is a selection of one food of every kind. These plates are our favorites. </br>
-      The Greek cuisine, though, is very rich with many more plates. 
-      I found  <a target="_blank" href="https://bucketlistjourney.net/traditional-greek-foods-you-must-eat-in-greece/">THIS</a> website that has more and as a local, I can say they are true. </br>
-      </br>
-      Καλή όρεξη!</br>( Kali oreksi )</br>Enjoy your meal! 
-      </p>
-      <div class="space-m"></div>
-    </div>
-
-      <!-- DRINKS -->
-      <div class="drinks inner_container">
-          <h2> Drinks</h2>
+  <!-- ---- CUISINE ---- -->
+    <div class="cuisine my_container menu_item" id="cuisine">
+      <h1> Cuisine</h1>
+      <div class="food inner_container">
+          <!---FOOD --->
+        <h2>Food</h2>
+        <!-- <h2>Fast Food: Souvlaki </h2> -->
         <div class="catalog">
-            <h2>A Very Greek Catalog </h2>
-            <ul>
-              <li>
-                <p class="category">CATEGORY </p>
-                <div class="lines l1"> </div>
-                <p class="en_name"> NAME </p>
-                <div class="lines l2"> </div>
-                <p class="gr_name"> GREEK NAME </p>
-              </li>  
-              <li>
-                <p class="category">Refreshment</p>
-                <div class="lines l1"> </div>
-                <p class="en_name"> Homemade Lemonade </p>
-                <div class="lines l2"> </div>
-                <p class="gr_name"> Σπιτική Λεμονάδα </p>
-              </li>
-              <li>
-                <p class="category"> Alcohol </p>
-                <div class="lines l1"> </div>
-                <p class="en_name"> Wine </p>
-                <div class="lines l2"> </div>
-                <p class="gr_name"> Κρασάκι </p>
-              </li>
-              <li>
-                <p class="category">Alcohol </p>
-                <div class="lines l1"> </div>
-                <p class="en_name"> Tsipouro </p>
-                <div class="lines l2"> </div>
-                <p class="gr_name"> Τσίπουρο </p>
-              </li>
-              <li>
-                <p class="category">Alcohol </p>
-                <div class="lines l1"> </div>
-                <p class="en_name"> Raki </p>
-                <div class="lines l2"> </div>
-                <p class="gr_name"> Ρακή </p>
-              </li>
-            </ul>
-
-          </div>
-          <p>We have all this alcohol?? Well, I couldn't get them out of the catalog.
-             <br><br> Γεια μας! <br>  ( yia mas )<br>Cheers! </p>
-     </div>
-    <div class="space-m"></div>
-  </div>
-  
-  <!-- ---- SHOPPING ---- -->
-  <div class="shopping my_container menu_item" id="shopping">
-    <h1> Street Shopping</h1>
-    <div class="inner_container">
-      <h2> Periptero</h2>
-      <div class="card_container flex_container col-2-cont">
-        <div>
-          <div class="oldphoto">
-            <img src="img/periptero1.jpg">
-            <!-- <p>picture by www.greece-is.com</p> -->
-            <a rel="nofollow" target="_blank" href="http://www.greece-is.com/the-kiosk-an-urban-greek-mainstay-since-1911/"> 
-              Photo by www.greece-is.com </a>
-          </div>
+          <h2>A Very Greek Catalog </h2>
+          <ul>
+            <li>
+              <p class="category">CATEGORY </p>
+              <div class="lines l1"> </div>
+              <p class="en_name"> NAME </p>
+              <div class="lines l2"> </div>
+              <p class="gr_name"> GREEK NAME </p>
+            </li>  
+            <li>
+              <p class="category">Fast food </p>
+              <div class="lines l1"> </div>
+              <p class="en_name"> Souvlaki </p>
+              <div class="lines l2"> </div>
+              <p class="gr_name"> Σουβλάκι </p>
+            </li>
+            <li>
+              <p class="category"> Mum's cuisine </p>
+              <div class="lines l1"> </div>
+              <p class="en_name"> Mousakas </p>
+              <div class="lines l2"> </div>
+              <p class="gr_name"> Μουσακάς </p>
+            </li>
+            <li>
+              <p class="category">Salad </p>
+              <div class="lines l1"> </div>
+              <p class="en_name"> Greek Salad </p>
+              <div class="lines l2"> </div>
+              <p class="gr_name"> Χωριάτικη </p>
+            </li>
+            <li>
+              <p class="category">Sauce </p>
+              <div class="lines l1"> </div>
+              <p class="en_name"> Tzatziki </p>
+              <div class="lines l2"> </div>
+              <p class="gr_name"> Τζατζίκι </p>
+            </li>
+            <li>
+              <p class="category">Sweet </p>
+              <div class="lines l1"> </div>
+              <p class="en_name"> Loukoumades </p>
+              <div class="lines l2"> </div>
+              <p class="gr_name"> Λουκουμάδες</p>
+            </li>
+          </ul>
         </div>
-            <p><b>Periptero</b> is a small kiosk placed randomly on the sidewalks of Greece. </br>
-              In these kiosks you can buy cigaretes, gums, magazines, snacks, ice-creams, and many many more things. </br>
-              You are out of chocolate? Oh yes, there is a periptero there, on the corner!
-             </p>
-             <div class="abtn">
-                <a target="_blank" href="http://www.greece-is.com/the-kiosk-an-urban-greek-mainstay-since-1911/">Read more</a>
-             </div>
-             <div class="abtn">
-                 <a target="_blank" href=" https://www.athenscoast.com/kiosk-mini-market/">Read even more</a>
-              </div>
-       </div>
-      <h2> Laiki Agora</h2>
-      <div class="card_container flex_container col-2-cont cc2">
+        <p> The Very Greek Catalog is a selection of one food of every kind. These plates are our favorites. </br>
+        The Greek cuisine, though, is very rich with many more plates. 
+        I found  <a target="_blank" href="https://bucketlistjourney.net/traditional-greek-foods-you-must-eat-in-greece/">THIS</a> website that has more and as a local, I can say they are true. </br>
+        </br>
+        Καλή όρεξη!</br>( Kali oreksi )</br>Enjoy your meal! 
+        </p>
+        <div class="space-m"></div>
+      </div>
 
-          <p><b>Laiki Agora</b> is a flea market full of in season fruits and vegetables. </br>
-             These flea markets are in a specific neighbourhoods around Athens, weekly. <br>
-             For example, at Perissos, there is a flea market every Saturday. <br>
-             There, you can also find fresh fish, wine, olive oil, spices, flowers... 
-           </p>
-           <div class="reverse_this">
-            <div class="oldphoto old2 ">
-                <img src="img/laiki.jpg">
-                <!-- <p>picture by www.greece-is.com</p> -->
-                <a rel="nofollow"  href="https://www.xpatathens.com/living-in-athens/survival-guide/practical-information/item/2135-laiki-agora-local-greek-farmer-s-market"> 
-                  Photo by www.xpatathens.com </a>
+        <!-- DRINKS -->
+        <div class="drinks inner_container">
+            <h2> Drinks</h2>
+          <div class="catalog">
+              <h2>A Very Greek Catalog </h2>
+              <ul>
+                <li>
+                  <p class="category">CATEGORY </p>
+                  <div class="lines l1"> </div>
+                  <p class="en_name"> NAME </p>
+                  <div class="lines l2"> </div>
+                  <p class="gr_name"> GREEK NAME </p>
+                </li>  
+                <li>
+                  <p class="category">Refreshment</p>
+                  <div class="lines l1"> </div>
+                  <p class="en_name"> Homemade Lemonade </p>
+                  <div class="lines l2"> </div>
+                  <p class="gr_name"> Σπιτική Λεμονάδα </p>
+                </li>
+                <li>
+                  <p class="category"> Alcohol </p>
+                  <div class="lines l1"> </div>
+                  <p class="en_name"> Wine </p>
+                  <div class="lines l2"> </div>
+                  <p class="gr_name"> Κρασάκι </p>
+                </li>
+                <li>
+                  <p class="category">Alcohol </p>
+                  <div class="lines l1"> </div>
+                  <p class="en_name"> Tsipouro </p>
+                  <div class="lines l2"> </div>
+                  <p class="gr_name"> Τσίπουρο </p>
+                </li>
+                <li>
+                  <p class="category">Alcohol </p>
+                  <div class="lines l1"> </div>
+                  <p class="en_name"> Raki </p>
+                  <div class="lines l2"> </div>
+                  <p class="gr_name"> Ρακή </p>
+                </li>
+              </ul>
+
             </div>
-          </div>
-           <div class="abtn">
-             <a target="_blank" href="https://www.xpatathens.com/living-in-athens/survival-guide/practical-information/item/2135-laiki-agora-local-greek-farmer-s-market">Read more</a>
-             <p class="sub-p">The list is not updated!</p>
-          </div>    
-        </div>
+            <p>We have all this alcohol?? Well, I couldn't get them out of the catalog.
+              <br><br> Γεια μας! <br>  ( yia mas )<br>Cheers! </p>
+      </div>
+      <div class="space-m"></div>
     </div>
-    <div class="space-m"></div>
-  </div> 
-
-  <!-- ---- NATURE----  -->
-  <div class="nature my_container menu_item" id="nature">
-        <h1> Nature</h1>
-        <div class="inner_container">
-          <h2>Fruits</h2>
-
-          <div class="fruit_container flex_container col-4-cont">
-            <div class="inner_flex_container">
-              <h3>Orange</h3>
-              <img src="img/orange.png">
-              <p class="fruit_date">Oct - May </P>
-              <p>Some fresh juice full of vitamin C</p>
+    
+    <!-- ---- SHOPPING ---- -->
+    <div class="shopping my_container menu_item" id="shopping">
+      <h1> Street Shopping</h1>
+      <div class="inner_container">
+        <h2> Periptero</h2>
+        <div class="card_container flex_container col-2-cont">
+          <div>
+            <div class="oldphoto">
+              <img src="img/periptero1.jpg">
+              <!-- <p>picture by www.greece-is.com</p> -->
+              <a rel="nofollow" target="_blank" href="http://www.greece-is.com/the-kiosk-an-urban-greek-mainstay-since-1911/"> 
+                Photo by www.greece-is.com </a>
             </div>
-            <div class="inner_flex_container">
-              <h3>Apple</h3>
-              <img src="img/apple.png">  
-              <p class="fruit_date">Jun - Oct </p>
-              <p>Red or green, they are all so sweet</p>
-
-            </div>
-            <div class="inner_flex_container">
-                <h3>Tangerine</h3>
-              <img src="img/mandarine.png">
-              <p class="fruit_date">Oct - Mar </p>
-              <p> A delicious little snack... or two... or three...</p>
-
-            </div>
-            <div class="inner_flex_container">
-                <h3>Lemon</h3>
-              <img src="img/lemon.png"> 
-              <p class="fruit_date">Sept - Apr </p>
-              <p> When life gives you lemons, it's time for lemonade
-              </p>
-
-            </div>
-            <div class="inner_flex_container">
-                <h3>Strawberry</h3>
-              <img src="img/strawberry.png">
-              <p class="fruit_date">Apr - Aug </p>
-              <p> Reminder to myself: buy some chocolate</p>
-            </div>
-            <div class="inner_flex_container">
-                <h3>Grapes</h3>
-              <img src="img/grapes.png">
-              <p class="fruit_date">Jul - Nov </p>
-              <p>Why do you think we have so much wine?</p>
-            </div>
-            <div class="inner_flex_container">
-                <h3>Pomegranate</h3>
-              <img src="img/pomegranate.png">
-              <p class="fruit_date">Sept - Nov </p>
-              <p>They are also known for bringing good luck at home</p>
-
-            </div>
-            <div class="inner_flex_container">
-                <h3>Watermelon</h3>
-              <img src="img/watermellon.png">
-              <p class="fruit_date">Jun - Sept </p>
-              <p>Picture that: you are on a beach, under an umbrella, eating watermelon</p>
-
-            </div>
-
-            
           </div>
+              <p><b>Periptero</b> is a small kiosk placed randomly on the sidewalks of Greece. </br>
+                In these kiosks you can buy cigaretes, gums, magazines, snacks, ice-creams, and many many more things. </br>
+                You are out of chocolate? Oh yes, there is a periptero there, on the corner!
+              </p>
+              <div class="abtn">
+                  <a target="_blank" href="http://www.greece-is.com/the-kiosk-an-urban-greek-mainstay-since-1911/">Read more</a>
+              </div>
+              <div class="abtn">
+                  <a target="_blank" href=" https://www.athenscoast.com/kiosk-mini-market/">Read even more</a>
+                </div>
         </div>
-        <div class="space-m"></div>
-    
-        <div class="inner_container">
-          <h2> Plants</h2>
-          <p>Coming soon...</br></br> Meanwhile, have some Tsipouro ;)</p>
-        </div>
-        <div class="space-m"></div>
-    
-        <!-- <div class="inner_container">
-          <h2> Mountains</h2>
-          <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
-        </div> -->
-        <div class="space-m"></div>
+        <h2> Laiki Agora</h2>
+        <div class="card_container flex_container col-2-cont cc2">
 
-        <!-- <img class="testgrr" src="img/grass.svg"/> -->
-
-        <div class="repeat-grass"></div>
-        <!-- <svg class="grass"><use xlink:href="#grass"/></svg> -->
-
+            <p><b>Laiki Agora</b> is a flea market full of in season fruits and vegetables. </br>
+              These flea markets are in a specific neighbourhoods around Athens, weekly. <br>
+              For example, at Perissos, there is a flea market every Saturday. <br>
+              There, you can also find fresh fish, wine, olive oil, spices, flowers... 
+            </p>
+            <div class="reverse_this">
+              <div class="oldphoto old2 ">
+                  <img src="img/laiki.jpg">
+                  <!-- <p>picture by www.greece-is.com</p> -->
+                  <a rel="nofollow"  href="https://www.xpatathens.com/living-in-athens/survival-guide/practical-information/item/2135-laiki-agora-local-greek-farmer-s-market"> 
+                    Photo by www.xpatathens.com </a>
+              </div>
+            </div>
+            <div class="abtn">
+              <a target="_blank" href="https://www.xpatathens.com/living-in-athens/survival-guide/practical-information/item/2135-laiki-agora-local-greek-farmer-s-market">Read more</a>
+              <p class="sub-p">The list is not updated!</p>
+            </div>    
+          </div>
+      </div>
+      <div class="space-m"></div>
     </div> 
 
-<!-- ---- TRASH ---- -->
-  <div class="trash my_container menu_item " id="trash">
-    <h1> Trash Bins</h1>
-    <div class="inner_container">
-      <p>There are 2 basic types of rubbish bins.</br></br></p>
+    <!-- ---- NATURE----  -->
+    <div class="nature my_container menu_item" id="nature">
+          <h1> Nature</h1>
+          <div class="inner_container">
+            <h2>Fruits</h2>
 
-      <div class="col-2-cont bin_container flex_container">
-        <div class="bins" >
-          <p> The first type is the green or silver bins. </br>
-          Here, you can throw away every kind of trash - except the recyclable ones!</p>
-          <img class="green_bin" id="green_bin" src="img/green_bin2.png">
-        </div>
-        <div class="bins" >
-          <p> Second type, blue bins. </br>
-            This is for recycling paper, metal, plastic, glass. </p>
-          <img class="blue_bin" id="blue_bin" src="img/blue_bin.png">
-        </div>
-      </div>
+            <div class="fruit_container flex_container col-4-cont">
+              <div class="inner_flex_container">
+                <h3>Orange</h3>
+                <img src="img/orange.png">
+                <p class="fruit_date">Oct - May </P>
+                <p>Some fresh juice full of vitamin C</p>
+              </div>
+              <div class="inner_flex_container">
+                <h3>Apple</h3>
+                <img src="img/apple.png">  
+                <p class="fruit_date">Jun - Oct </p>
+                <p>Red or green, they are all so sweet</p>
 
-      <div class="trash_imgs" id="trash_imgs">
-          <img class="tr_img btr" src="img/bottle-plastic.png">
-          <img class="tr_img btr" src="img/newspaper.png">
-          <img class="tr_img btr" src="img/tin_can.png">
-          <img class="tr_img btr" src="img/glass.png">
-          <img class="tr_img" src="img/banana_peel.png">
-          <img class="tr_img" src="img/pizza.png">
-          <img class="tr_img" src="img/binbag.png">
-          <img class="tr_img" src="img/fishbone.png">
-      </div>
+              </div>
+              <div class="inner_flex_container">
+                  <h3>Tangerine</h3>
+                <img src="img/mandarine.png">
+                <p class="fruit_date">Oct - Mar </p>
+                <p> A delicious little snack... or two... or three...</p>
 
-        <div class="space-m"></div>
+              </div>
+              <div class="inner_flex_container">
+                  <h3>Lemon</h3>
+                <img src="img/lemon.png"> 
+                <p class="fruit_date">Sept - Apr </p>
+                <p> When life gives you lemons, it's time for lemonade
+                </p>
 
-    </div>
-  </div>
+              </div>
+              <div class="inner_flex_container">
+                  <h3>Strawberry</h3>
+                <img src="img/strawberry.png">
+                <p class="fruit_date">Apr - Aug </p>
+                <p> Reminder to myself: buy some chocolate</p>
+              </div>
+              <div class="inner_flex_container">
+                  <h3>Grapes</h3>
+                <img src="img/grapes.png">
+                <p class="fruit_date">Jul - Nov </p>
+                <p>Why do you think we have so much wine?</p>
+              </div>
+              <div class="inner_flex_container">
+                  <h3>Pomegranate</h3>
+                <img src="img/pomegranate.png">
+                <p class="fruit_date">Sept - Nov </p>
+                <p>They are also known for bringing good luck at home</p>
 
+              </div>
+              <div class="inner_flex_container">
+                  <h3>Watermelon</h3>
+                <img src="img/watermellon.png">
+                <p class="fruit_date">Jun - Sept </p>
+                <p>Picture that: you are on a beach, under an umbrella, eating watermelon</p>
 
-    <!-- 
-    <div class="gen my_container menu_item" id="General">
-        <h1> Title</h1>
-        <div class="inner_container">
-          <h2> Subtitle</h2>
-          <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
-        </div>
-        <div class="space-m"></div>
+              </div>
+
+              
+            </div>
+          </div>
+          <div class="space-m"></div>
+      
+          <div class="inner_container">
+            <h2> Plants</h2>
+            <p>Coming soon...</br></br> Meanwhile, have some Tsipouro ;)</p>
+          </div>
+          <div class="space-m"></div>
+      
+          <!-- <div class="inner_container">
+            <h2> Mountains</h2>
+            <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
+          </div> -->
+          <div class="space-m"></div>
+
+          <!-- <img class="testgrr" src="img/grass.svg"/> -->
+
+          <div class="repeat-grass"></div>
+          <!-- <svg class="grass"><use xlink:href="#grass"/></svg> -->
+
       </div> 
-    -->
 
-  <footer>
-    <div class="space-s"></div>
-    <p>Katerina had free time.</p>
-    <div class="space-s"></div>
+  <!-- ---- TRASH ---- -->
+    <div class="trash my_container menu_item " id="trash">
+      <h1> Trash Bins</h1>
+      <div class="inner_container">
+        <p>There are 2 basic types of rubbish bins.</br></br></p>
 
-  </footer>
+        <div class="col-2-cont bin_container flex_container">
+          <div class="bins" >
+            <p> The first type is the green or silver bins. </br>
+            Here, you can throw away every kind of trash - except the recyclable ones!</p>
+            <img class="green_bin" id="green_bin" src="img/green_bin2.png">
+          </div>
+          <div class="bins" >
+            <p> Second type, blue bins. </br>
+              This is for recycling paper, metal, plastic, glass. </p>
+            <img class="blue_bin" id="blue_bin" src="img/blue_bin.png">
+          </div>
+        </div>
 
+        <div class="trash_imgs" id="trash_imgs">
+            <img class="tr_img btr" src="img/bottle-plastic.png">
+            <img class="tr_img btr" src="img/newspaper.png">
+            <img class="tr_img btr" src="img/tin_can.png">
+            <img class="tr_img btr" src="img/glass.png">
+            <img class="tr_img" src="img/banana_peel.png">
+            <img class="tr_img" src="img/pizza.png">
+            <img class="tr_img" src="img/binbag.png">
+            <img class="tr_img" src="img/fishbone.png">
+        </div>
+
+          <div class="space-m"></div>
+
+      </div>
+    </div>
+
+
+      <!-- 
+      <div class="gen my_container menu_item" id="General">
+          <h1> Title</h1>
+          <div class="inner_container">
+            <h2> Subtitle</h2>
+            <p>Loading...</br></br> Meanwhile, try a Homemade Lemonade ;)</p>
+          </div>
+          <div class="space-m"></div>
+        </div> 
+      -->
+
+    <footer>
+      <div class="space-s"></div>
+      <p>Katerina had free time.</p>
+      <div class="space-s"></div>
+
+    </footer>
+</div>
 </body>
 
 </html>
