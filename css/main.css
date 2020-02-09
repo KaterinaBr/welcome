@@ -174,14 +174,7 @@ a:hover {
 .side_menu li {
   padding: 0.35rem 0;
 }
-/* .side_menu li:hover {
-  font-size: 2rem;
-  padding: 0;
-} */
-/* .side_menu .active {
-  font-size: 2rem;
-  padding: 0;
-} */
+
 .side_menu a:hover {
  border: none;
 }
@@ -237,6 +230,23 @@ a:hover {
   visibility: visible;
   opacity: 1;
 }
+
+
+/* --- SCORE SECTION --- */
+
+.score-container {
+
+  display: none;
+  position: fixed;
+  top: 0rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  opacity: 0.5;
+  /* background-color: var(--color-almost-white); */
+
+}
+
 
  /*--- WELCOME SECTION ---*/
 
