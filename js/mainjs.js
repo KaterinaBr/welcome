@@ -1,3 +1,5 @@
+var bin_score = 0;
+
 function MainFunction() {
 
 // MENU 
@@ -5,14 +7,12 @@ function MainFunction() {
   var btns = document.getElementsByClassName("menu_btn");
 
   var current = document.getElementsByClassName("active");
-  var prev = "";
 
   var menu = document.getElementById("side_menu");
 
   var score = document.getElementById("score-container");
-  var open_score = false;
   var close_score_timeout;
-  var bin_score = 0;
+  // var bin_score = 0;
 
   // BINS
   var tr_imgs = document.getElementsByClassName("tr_img");
@@ -20,56 +20,46 @@ function MainFunction() {
   var blue_bin = document.getElementById("blue_bin");
   var green_bin = document.getElementById("green_bin");
 
+  var taxi = document.getElementById('taxi');
+
+
   
   window.onscroll = function () {
     
     // MENU --------
     OnscrollSetActive();
+    OnscrollSetBg(menu);
+    OnscrollSetBg(score);
 
     // MOVE TAXI -------
     MoveTaxi();
 
   };
 
+//it works..
+  //  $(".menu_btn").on("click", function() {
+  //   alert("aloha2");
+  //  });
+
 
   
   function OnscrollSetActive() {
-    if (screen.width > 700) {
-      var screenheight = screen.height / 3;
-    } else {
-      var screenheight = 50;
-    }
-    // var screenheightscore = 50;
-    
-
-    var firstoffset = document.getElementById("transport").offsetTop;
-
-    if (window.pageYOffset < firstoffset - screen.height / 3) {
+    var screenheight = menu.offsetTop + (menu.offsetHeight/3);
+    if (window.pageYOffset < menu_items[0].offsetTop - screen.height / 3) {
       SetActive(0);
-      SetBg(menu);
-      if (open_score) {  SetBg(score); }
-
     } else {
       for (let i = 0; i < menu_items.length; i++) {
-        if (i < menu_items.length - 1) {
-          var nextoffset = menu_items[i + 1].offsetTop;
-        } else {
-          var nextoffset = body.offsetHeight;
-        }
+        var nextoffset = menu_items[i].offsetHeight + menu_items[i].offsetTop;
         if ((window.pageYOffset >= menu_items[i].offsetTop - screenheight) &&
           (window.pageYOffset < nextoffset - screenheight)) {
           SetActive(btns[i]);
-          SetBg(menu);
-          if (open_score) {  SetBg(score); }
         }
       }
     }
-
   }
-  
+
   function SetActive(btn) {
     if (current.length > 0) {
-      prev = " " + current[0].firstChild.text;
       current[0].className = current[0].className.replace(" active", "");
     }
     if (btn != 0) {
@@ -77,17 +67,22 @@ function MainFunction() {
     }
   }
 
-  function SetBg(thing) {
-    if (prev.length > 0) {
-      thing.className = thing.className.replace(prev, "");
+  function OnscrollSetBg(thing) {
+    var screenheight = thing.offsetTop + (thing.offsetHeight/3);
+    var firstclass = "" + thing.className.split(" ")[0];
+    if (thing.className!=firstclass) {
+      thing.className = thing.className.replace(thing.className,firstclass);
     }
-    if (current[0]) {
-      thing.className += " " + current[0].firstChild.text;
+    if (window.pageYOffset >= menu_items[0].offsetTop - screenheight) {
+      for (let i = 0; i < menu_items.length; i++) {
+        var nextoffset = menu_items[i].offsetHeight + menu_items[i].offsetTop;
+        if ((window.pageYOffset >= menu_items[i].offsetTop - screenheight) &&
+          (window.pageYOffset < nextoffset - screenheight)) {
+          thing.className += " " + menu_items[i].className.split(" ")[0];
+        }
+      }
     }
   }
-
-
-
 
 
   // --- CHANGE WELCOME ---
@@ -104,16 +99,15 @@ function MainFunction() {
   }, 1200);
 
 
-
   // --- MODAL ---
   var modal = document.getElementById("mapModal");
-  var btn = document.getElementById("metro_img");
-  var span = document.getElementsByClassName("close")[0];
+  var mdl_btn = document.getElementById("metro_img");
+  var mdl_span = document.getElementsByClassName("close")[0];
 
-  btn.onclick = function () {
+  mdl_btn.onclick = function () {
     modal.style.display = "block";
   }
-  span.onclick = function () {
+  mdl_span.onclick = function () {
     modal.style.display = "none";
   }
   window.onclick = function (event) {
@@ -126,12 +120,10 @@ function MainFunction() {
   // --- MOVING CAR ---
   function MoveTaxi() {
 
-    var taxi = document.getElementById('taxi');
     var offset = taxi.offsetTop;
     if ((pageYOffset <= offset + 0) && (pageYOffset >= offset - window.innerHeight + 0)) {
       var taxileft = (pageYOffset - offset + window.innerHeight - 0) * window.innerWidth / (window.innerHeight - 0);
       taxi.style.left = taxileft + 'px';
-
     }
   }
 
@@ -147,7 +139,7 @@ function MainFunction() {
   }
 
   function showThing(bin) {
-    var t = tr_imgs.length + 1;
+    var t = tr_imgs.length;
 
     do {
       if (bin.toElement.id == "blue_bin") {
@@ -157,21 +149,18 @@ function MainFunction() {
       }
       t--;
     }
-    while (tr_imgs[r].onthemove && t >= 0);
+    while (tr_imgs[r].onthemove && t > 0);
 
     if (t >= 1) {
       tr_imgs[r].onthemove = true;
       ThrowThing(tr_imgs[r], bin);
-    }
-
-    if (bin.toElement.id == "blue_bin") {
-      showScore (true, "bin");
+      if (bin.toElement.id == "blue_bin") {
+        showScore ("bin");
+      }
     }
   }
 
   function ThrowThing(thing, bin) {
-    // console.log("there i am!");
-
     var time = 0;
     var max_time = 300;
 
@@ -192,32 +181,28 @@ function MainFunction() {
 
     var posx = startx;
     var posy = starty;
-
     var accy = 2;
     var day = (accy * 2) / max_time;
-
-    var startw = 100;
-    var endw = 20;
-
+    var startw = 120;
+    var endw = 10;
+    var vx = (endx - startx) / max_time;
+    var vy = (endy - starty) / max_time;
+    
     var id = setInterval(frame, 5);
-
+    
     function frame() {
       if (time == max_time) {
         clearInterval(id);
         thing.style.visibility = "hidden";
         thing.onthemove = false;
-
+        
       } else {
-        var vx = (endx - startx) / max_time;
         posx += vx;
-        var vy = (endy - starty) / max_time;
         accy -= day;
         posy += vy - accy;
-
         var dw = (startw - endw) / max_time;
         startw -= dw;
         thing.style.width = startw + "px";
-
         thing.style.left = posx + "px";
         thing.style.top = posy + "px";
         time++;
@@ -228,35 +213,26 @@ function MainFunction() {
   }
 
 
-  function showScore(flag,game) {
-    if (flag) {
-      open_score = true;
-      score.style.display = "block";
-      closeScore();
-      
-      if (game) {
-
-        if (game == "bin") {
-          bin_score ++;
-          document.getElementById("bin_score").innerHTML = bin_score;
-        }
-      }
-    }
-    else {
-      score.style.display = "none";
-    }
-
-  }
-
-
-  function closeScore() {
+  function showScore(game) {
+    var n = game+"_score";
+    window[n] ++;
+    document.getElementById(n).innerHTML = window[n];
+    
+    score.style.display = "block";      
     if (close_score_timeout) {
       clearTimeout(close_score_timeout);
     }
     close_score_timeout = setTimeout(function () {
-        showScore(false);
-    }, 5000);
+      score.style.display = "none";
+    }, 10000);
   }
+}
 
 
+// $ (document).ready (function() {
+//     MainFunction();
+//   });
+
+window.onload = function WindowLoad(event) {
+  MainFunction();
 }
