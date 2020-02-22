@@ -1,4 +1,5 @@
 var bin_score = 0;
+var fruit_score = 0;
 
 function MainFunction() {
 
@@ -12,7 +13,6 @@ function MainFunction() {
 
   var score = document.getElementById("score-container");
   var close_score_timeout;
-  // var bin_score = 0;
 
   // BINS
   var tr_imgs = document.getElementsByClassName("tr_img");
@@ -21,6 +21,8 @@ function MainFunction() {
   var green_bin = document.getElementById("green_bin");
 
   var taxi = document.getElementById('taxi');
+
+  var fruits = document.getElementsByClassName("fruit_img");
 
 
   
@@ -47,7 +49,8 @@ function MainFunction() {
     var screenheight = menu.offsetTop + (menu.offsetHeight/3);
     if (window.pageYOffset < menu_items[0].offsetTop - screen.height / 3) {
       SetActive(0);
-    } else {
+    } 
+    else {
       for (let i = 0; i < menu_items.length; i++) {
         var nextoffset = menu_items[i].offsetHeight + menu_items[i].offsetTop;
         if ((window.pageYOffset >= menu_items[i].offsetTop - screenheight) &&
@@ -126,6 +129,26 @@ function MainFunction() {
       taxi.style.left = taxileft + 'px';
     }
   }
+
+  // --- EATING FRUITS --- 
+  
+
+
+  $(".fruit_img").on("click",function(event){
+    // console.log(event.target);
+    var fruit = $(event.target);
+    if (!fruit.attr("no")) {
+      fruit.attr("no",1);
+    }
+    else if (fruit.attr("no")==4) {
+      showScore ("fruit");
+      fruit.attr("no",0);
+    }
+    else {
+      fruit.attr("no",parseInt(fruit.attr("no")) + 1);
+    }
+  })
+
 
 
   // --- TRASH MINI GAME ---

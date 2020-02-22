@@ -242,9 +242,14 @@ a:hover {
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 4px;
-  opacity: 0.5;
+  opacity: 0.8;
   /* background-color: var(--color-almost-white); */
   transition: all 0.5s ease;
+  text-align: left;
+}
+
+.score-container span {
+  font-size: 2rem;
 }
 
 
@@ -601,6 +606,10 @@ a:hover {
 
 
 @media only screen and (max-width: 600px) {
+  .score-container {
+    top: 3.8rem;
+  }
+  
   p {
     margin-left: var(--margin-lr-sm);
     margin-right: var(--margin-lr-sm);
