@@ -137,17 +137,43 @@ function MainFunction() {
   $(".fruit_img").on("click",function(event){
     // console.log(event.target);
     var fruit = $(event.target);
-    if (!fruit.attr("no")) {
-      fruit.attr("no",1);
+    if (fruit.attr("no")!=4) {
+      if (!fruit.attr("no")) {
+        fruit.attr("no",1);
+      }
+      else if (fruit.attr("no")==4) {
+        fruit.attr("no",0);
+      }
+      else {
+        fruit.attr("no",parseInt(fruit.attr("no")) + 1);
+      }
+  
+      var new_src = fruit.attr("src").split(".")[0].slice(0, -1) + fruit.attr("no") + ".png";
+      fruit.attr("src",new_src);
+      console.log(fruit.attr("no"));
+      
+      if (fruit.attr("no") == 4) {
+        showScore ("fruit");
+        fruit.animate({ top: "+=120px" }, 1500 );
+        fruit.queue(function() {
+          fruit.attr("no",0);
+          var new_src = fruit.attr("src").split(".")[0].slice(0, -1) + fruit.attr("no") + ".png";
+          fruit.attr("src",new_src);
+          fruit.css("top", "-120px");
+          fruit.dequeue();
+        });
+        fruit.animate({ top: "+=120px" }, 1500 );
+
     }
-    else if (fruit.attr("no")==4) {
-      showScore ("fruit");
-      fruit.attr("no",0);
+
+
     }
-    else {
-      fruit.attr("no",parseInt(fruit.attr("no")) + 1);
-    }
+      
+    // console.log(fruit.attr("src").split(".")[0] + fruit.attr("no") + "." + fruit.attr("src").split(".")[1]);
   })
+
+  // src="img/apple.png"
+  // $( ".block" ).animate({ "left": "+=50px" }, "slow" );
 
 
 

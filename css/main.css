@@ -511,12 +511,16 @@ a:hover {
 .fruit_container img {
   width: 65%;
   margin: 0 auto 1rem;
+  position: relative;
 }
 
 .fruit_container{
   text-align: center;
 }
 
+.inner_flex_container div {
+  overflow: hidden;
+}
 .col-4-cont> * {
   max-width: 180px;
 }
