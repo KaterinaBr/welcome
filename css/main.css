@@ -246,12 +246,16 @@ a:hover {
   /* background-color: var(--color-almost-white); */
   transition: all 0.5s ease;
   text-align: left;
+  z-index: 1;
 }
 
 .score-container span {
   font-size: 2rem;
 }
-
+.score-container div {
+  
+  display: none;
+}
 
  /*--- WELCOME SECTION ---*/
 

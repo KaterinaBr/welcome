@@ -137,7 +137,8 @@ function MainFunction() {
   $(".fruit_img").on("click",function(event){
     // console.log(event.target);
     var fruit = $(event.target);
-    if (fruit.attr("no")!=4) {
+    if (!fruit.attr("disable")) {
+      if ((fruit.attr("no")!=4)) {
       if (!fruit.attr("no")) {
         fruit.attr("no",1);
       }
@@ -165,6 +166,7 @@ function MainFunction() {
         fruit.animate({ top: "+=120px" }, 1500 );
 
     }
+  }
 
 
     }
@@ -267,7 +269,12 @@ function MainFunction() {
     window[n] ++;
     document.getElementById(n).innerHTML = window[n];
     
-    score.style.display = "block";      
+    score.style.display = "block";   
+    if (window[n] ==1) {
+      var parentdiv = n+"_container";
+      console.log(parentdiv);
+      document.getElementById(parentdiv).style.display = "block";
+    }   
     if (close_score_timeout) {
       clearTimeout(close_score_timeout);
     }
