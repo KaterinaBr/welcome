@@ -1,0 +1,11 @@
+<svg  xmlns="http://www.w3.org/2000/svg" style="display: none;">
+	
+	<symbol id="oasa_icon1" viewBox="0 0 40 37">
+		<path d="M39.9,0H18.5C8.3,0,0,8.3,0,18.5S8.3,37,18.5,37c3.4,0,6.6-0.9,9.5-2.7V37h9V18.5c0-3.4-0.9-6.6-2.7-9.5h5.5V0z M28,18.5
+			c0,5.2-4.3,9.5-9.5,9.5S9,23.7,9,18.5S13.3,9,18.5,9C23.7,9,28,13.3,28,18.5z"/>
+	</symbol>
+
+	<symbol id="arrow_down1" viewBox="0 0 50 30">
+		<polygon points="25,28.1 0.6,3.7 2.4,1.9 25,24.5 47.6,1.9 49.4,3.7 	"/>
+	</symbol>
+</svg>
