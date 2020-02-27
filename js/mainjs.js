@@ -137,7 +137,6 @@ function MainFunction() {
   $(".fruit_img").on("click",function(event){
     // console.log(event.target);
     var fruit = $(event.target);
-    if (!fruit.attr("disable")) {
       if ((fruit.attr("no")!=4)) {
       if (!fruit.attr("no")) {
         fruit.attr("no",1);
@@ -166,11 +165,7 @@ function MainFunction() {
         fruit.animate({ top: "+=120px" }, 1500 );
 
     }
-  }
-
-
-    }
-      
+  }      
     // console.log(fruit.attr("src").split(".")[0] + fruit.attr("no") + "." + fruit.attr("src").split(".")[1]);
   })
 

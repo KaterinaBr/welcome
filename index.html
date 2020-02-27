@@ -494,7 +494,7 @@
               <div class="inner_flex_container">
                 <h3>Lemon</h3>
                 <div>
-                  <img class="fruit_img" disable="true" src="img/lemon0.png"> 
+                  <img class="fruit_img" src="img/lemon0.png"> 
                 </div>
                 <p class="fruit_date">Sept - Apr </p>
                 <p> When life gives you lemons, it's time for lemonade.
@@ -614,6 +614,31 @@
 
     </footer>
 </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+ 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+ 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBKVkIc45dl4fl8u2xwJCzs4IDx2b9TgtM",
+    authDomain: "handbookofgreecehost.firebaseapp.com",
+    databaseURL: "https://handbookofgreecehost.firebaseio.com",
+    projectId: "handbookofgreecehost",
+    storageBucket: "handbookofgreecehost.appspot.com",
+    messagingSenderId: "703863924814",
+    appId: "1:703863924814:web:da0e49805bc718c78f7b1f",
+    measurementId: "G-VRHB0TBLMY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 </body>
 
 </html>
