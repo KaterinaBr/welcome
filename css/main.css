@@ -548,8 +548,15 @@ cursor: pointer;
 
 .fruit_container img {
   width: 65%;
+  padding: 3%;
   margin: 0 auto 1rem;
   position: relative;
+}
+
+.fruit_container img:hover {
+  width: 67%;
+  padding: 2%;
+  cursor: pointer;
 }
 
 .fruit_container{
