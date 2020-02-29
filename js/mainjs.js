@@ -10,6 +10,7 @@ function MainFunction() {
   var current = document.getElementsByClassName("active");
 
   var menu = document.getElementById("side_menu");
+  var settings = document.getElementById("settings");
 
   var score = document.getElementById("score-container");
   var close_score_timeout;
@@ -32,6 +33,7 @@ function MainFunction() {
     OnscrollSetActive();
     OnscrollSetBg(menu);
     OnscrollSetBg(score);
+    OnscrollSetBg(settings);
 
     // MOVE TAXI -------
     MoveTaxi();
@@ -132,8 +134,6 @@ function MainFunction() {
 
   // --- EATING FRUITS --- 
   
-
-
   $(".fruit_img").on("click",function(event){
     // console.log(event.target);
     var fruit = $(event.target);
@@ -167,11 +167,16 @@ function MainFunction() {
     }
   }      
     // console.log(fruit.attr("src").split(".")[0] + fruit.attr("no") + "." + fruit.attr("src").split(".")[1]);
-  })
+  });
 
-  // src="img/apple.png"
-  // $( ".block" ).animate({ "left": "+=50px" }, "slow" );
 
+  // --- SETTINGS ---
+
+  $("#change_font").on("click",function(){
+    $("body").toggleClass("body_simpler_font");
+    $("h1").toggleClass("h_simpler_font");
+    $("h2").toggleClass("h_simpler_font");
+  });
 
 
   // --- TRASH MINI GAME ---

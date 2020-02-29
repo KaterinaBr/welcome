@@ -13,6 +13,7 @@
   --font-walter: 'Walter Turncoat', cursive;
   --font-indie: 'Indie Flower', cursive;
   --font-amatic: 'Amatic SC', cursive;
+  --font-raleway: 'Raleway';
   --font-greek: 'GFS Neohellenic', sans-serif;
 
   /*--font-amatic: BlackBetty;*/
@@ -53,6 +54,13 @@ body {
   padding: 0;
 }
 
+
+.body_simpler_font {
+  font-family: var(--font-raleway), var(--font-greek);
+  letter-spacing: 1;
+  font-size: 1.1rem;
+}
+
 body, html{
   overflow-x: hidden;
 }
@@ -69,21 +77,29 @@ img {
   margin: 0 var(--margin-lr-sm);
 }
 
-h1 {
+h1, h2 {
   font-family: var(--font-amatic);
-  font-size: var(--font-size-l);
   font-weight: 400;
-  padding: var(--space-m) 1.25rem var(--space-s);
   margin: 0 auto;
 }
 
-h2 {
-  font-family: var(--font-amatic);
-  font-size: var(--font-size-m);
-  font-weight: 400;
-  padding: var(--space-s) var(--margin-lr-sm) var(--space-m);
-  margin: 0 auto;
+.h_simpler_font {
+  font-family: var(--font-raleway);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+
 }
+
+h1 {
+  font-size: var(--font-size-l);
+  padding: var(--space-m) 1.25rem var(--space-s);
+}
+
+h2 {
+  font-size: var(--font-size-m);
+  padding: var(--space-s) var(--margin-lr-sm) var(--space-m);
+}
+
 
 h3 {
   text-transform: uppercase;
@@ -91,13 +107,13 @@ h3 {
 }
 
 p {
-  /* font-family: var(--font-comfortaa); */
   margin: 0 auto 1.25rem;
   max-width: var(--max-w-p);
   letter-spacing: 0.05rem;
   line-height: 1.3;
   cursor: default;
 }
+
 
 a {
   color: white;
@@ -230,6 +246,24 @@ a:hover {
   visibility: visible;
   opacity: 1;
 }
+
+
+/* --- SETTINGS --- */
+.settings {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  z-index: 1;
+  padding: 0.2rem 1rem;
+
+}
+
+.settings div {
+cursor: pointer;
+}
+
 
 
 /* --- SCORE SECTION --- */
