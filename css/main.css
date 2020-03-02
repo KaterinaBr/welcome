@@ -123,9 +123,11 @@ a {
   /* padding: calc(0.5rem + 1px); */
   padding: 0.4rem 0.8rem 0.3rem;
   transition: border 0.2s;
-  margin: 0.5rem auto;
+  margin: 0.1rem auto;
   background-color: #ffffff20;
+  display: inline-block;
 }
+
 a:hover {
   color: var(--color-almost-white);
   border: 1px solid var(--color-almost-white);
@@ -135,8 +137,8 @@ a:hover {
   
 }
 .abtn {
-  margin: 2rem var(--margin-lr-sm);
-  display: grid;
+  /* margin: 2rem var(--margin-lr-sm); */
+  /* display: grid; */
 }
 
 .space-m {
@@ -252,16 +254,37 @@ a:hover {
 .settings {
   position: fixed;
   bottom: 1rem;
-  left: 1rem;
+  left: -100px;
   border-radius: 4px;
-  transition: all 0.5s ease;
   z-index: 1;
   padding: 0.2rem 1rem;
+  display: flex;
+  align-items: flex-end;
 
 }
 
-.settings div {
+.settings .setting {
 cursor: pointer;
+}
+
+.settings .all_options svg {
+  fill: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+.all_options, .setting_tab {
+  border: 1px solid #ffffff1f;
+  padding: 0.2rem 1rem;
+  margin: 0.5rem;
+  transition: all 0.5s ease;
+
+
+}
+.setting-icon {
+  fill: white;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 

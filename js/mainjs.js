@@ -10,7 +10,8 @@ function MainFunction() {
   var current = document.getElementsByClassName("active");
 
   var menu = document.getElementById("side_menu");
-  var settings = document.getElementById("settings");
+  var settings1 = document.getElementById("all_options");
+  var settings2 = document.getElementById("setting_tab");
 
   var score = document.getElementById("score-container");
   var close_score_timeout;
@@ -23,9 +24,9 @@ function MainFunction() {
 
   var taxi = document.getElementById('taxi');
 
-  var fruits = document.getElementsByClassName("fruit_img");
 
 
+  console.log("telos section: " + menu_items[2].className + " : " +(menu_items[2].offsetHeight + menu_items[2].offsetTop));
   
   window.onscroll = function () {
     
@@ -33,7 +34,9 @@ function MainFunction() {
     OnscrollSetActive();
     OnscrollSetBg(menu);
     OnscrollSetBg(score);
-    OnscrollSetBg(settings);
+    OnscrollSetBg(settings1);
+    OnscrollSetBg(settings2);
+    // console.log("telos settings: " + settings2.offsetTop);
 
     // MOVE TAXI -------
     MoveTaxi();
@@ -73,22 +76,18 @@ function MainFunction() {
   }
 
   function OnscrollSetBg(thing) {
-    var screenheight = thing.offsetTop + (thing.offsetHeight/3);
-    var firstclass = "" + thing.className.split(" ")[0];
-    if (thing.className!=firstclass) {
-      thing.className = thing.className.replace(thing.className,firstclass);
-    }
-    if (window.pageYOffset >= menu_items[0].offsetTop - screenheight) {
-      for (let i = 0; i < menu_items.length; i++) {
-        var nextoffset = menu_items[i].offsetHeight + menu_items[i].offsetTop;
-        if ((window.pageYOffset >= menu_items[i].offsetTop - screenheight) &&
-          (window.pageYOffset < nextoffset - screenheight)) {
-          thing.className += " " + menu_items[i].className.split(" ")[0];
+    
+    let current_position = $(thing).offset().top + (thing.offsetHeight/3);
+      for(let menu_item of menu_items){
+        if(current_position >= $(menu_item).offset().top && current_position <= $(menu_item).offset().top+$(menu_item).outerHeight()){
+          if(!$(thing).hasClass(menu_item.className.split(" ")[0])){
+            $(thing).addClass(menu_item.className.split(" ")[0])
+          }
+        }else{
+          $(thing).removeClass(menu_item.className.split(" ")[0])
         }
       }
-    }
   }
-
 
   // --- CHANGE WELCOME ---
   var text = ["Welcome to Greece", "Welcome to Athens", " Welcome to our place"];
@@ -178,6 +177,17 @@ function MainFunction() {
     $("h2").toggleClass("h_simpler_font");
   });
 
+
+  $(".setting_tab").on("click", function() {
+    if ($(".settings").attr("state-open")=="true") {
+      $(".settings").attr("state-open",false);
+      $(".settings").animate({'left' : '-100px' },70);
+    }
+    else {
+      $(".settings").attr("state-open",true);
+      $(".settings").animate({'left' : '0px' },70);     
+    }
+  });
 
   // --- TRASH MINI GAME ---
 
