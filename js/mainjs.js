@@ -32,21 +32,13 @@ function MainFunction() {
     
     // MENU --------
     OnscrollSetActive();
-    OnscrollSetBg(menu);
-    OnscrollSetBg(score);
-    OnscrollSetBg(settings1);
-    OnscrollSetBg(settings2);
-    // console.log("telos settings: " + settings2.offsetTop);
+
+    OnscrollSetBg();
 
     // MOVE TAXI -------
     MoveTaxi();
 
   };
-
-//it works..
-  //  $(".menu_btn").on("click", function() {
-  //   alert("aloha2");
-  //  });
 
 
   
@@ -67,17 +59,17 @@ function MainFunction() {
   }
 
   function SetActive(btn) {
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
-    }
-    if (btn != 0) {
-      btn.className += " active";
+    if (!$(btn).hasClass("active")){
+      $(".active").removeClass("active");
+      $(btn).addClass("active");
     }
   }
 
-  function OnscrollSetBg(thing) {
-    
-    let current_position = $(thing).offset().top + (thing.offsetHeight/3);
+
+  function OnscrollSetBg() {
+    let things = $(".auto_bg");
+    for (let thing of things) {
+      let current_position = $(thing).offset().top + (thing.offsetHeight/3);
       for(let menu_item of menu_items){
         if(current_position >= $(menu_item).offset().top && current_position <= $(menu_item).offset().top+$(menu_item).outerHeight()){
           if(!$(thing).hasClass(menu_item.className.split(" ")[0])){
@@ -87,6 +79,7 @@ function MainFunction() {
           $(thing).removeClass(menu_item.className.split(" ")[0])
         }
       }
+    }
   }
 
   // --- CHANGE WELCOME ---
@@ -181,11 +174,11 @@ function MainFunction() {
   $(".setting_tab").on("click", function() {
     if ($(".settings").attr("state-open")=="true") {
       $(".settings").attr("state-open",false);
-      $(".settings").animate({'left' : '-100px' },70);
+      $(".settings").animate({'left' : '-80px' },140);
     }
     else {
       $(".settings").attr("state-open",true);
-      $(".settings").animate({'left' : '0px' },70);     
+      $(".settings").animate({'left' : '0px' },100);     
     }
   });
 

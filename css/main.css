@@ -16,7 +16,6 @@
   --font-raleway: 'Raleway';
   --font-greek: 'GFS Neohellenic', sans-serif;
 
-  /*--font-amatic: BlackBetty;*/
 
   --font-size-l: 4rem;
   --font-size-m: 2.5rem;
@@ -32,15 +31,8 @@
   --max-w-p: 600px;
   --min-width-mobile :320px;
 
-
 }
 
-
-
-@font-face {
-  font-family: BlackBetty;
-  src: url(font/BlackBetty.otf);
-}
 
  /*--- GENERAL --- */
 
@@ -254,7 +246,7 @@ a:hover {
 .settings {
   position: fixed;
   bottom: 1rem;
-  left: -100px;
+  left: -80px;
   border-radius: 4px;
   z-index: 1;
   padding: 0.2rem 1rem;
@@ -275,9 +267,11 @@ cursor: pointer;
 
 .all_options, .setting_tab {
   border: 1px solid #ffffff1f;
-  padding: 0.2rem 1rem;
-  margin: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem 0.3rem;
   transition: all 0.5s ease;
+  border-radius: 4px;
+  opacity: 0.9;
 
 
 }
@@ -285,6 +279,25 @@ cursor: pointer;
   fill: white;
   width: 1.4rem;
   height: 1.4rem;
+}
+
+.setting_tab {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.setting_tab:hover {
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.setting_tab div {
+  height: 1.4rem;
+}
+
+.all_options div {
+  height: 2rem;
 }
 
 
@@ -344,7 +357,9 @@ cursor: pointer;
 .btn_down {
   border: none;
   padding: 0;
+  background-color: transparent;
 }
+
 .btn_down:hover {
   border: none;
 }
