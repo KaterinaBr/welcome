@@ -8,6 +8,7 @@
   --color-orange: #EF6414;
   --color-pink: #b51a59;
   --color-purple: #571845;
+  --color-brown: #423119;
   --color-almost-white: #f0e1f0;
 
   --font-walter: 'Walter Turncoat', cursive;
@@ -662,6 +663,48 @@ cursor: pointer;
 .bins:hover {
   box-shadow: 0 0 19px #da9b22;
   border-radius: 10px;
+}
+
+
+ /*--- APLHABET SECTION --- */
+
+.alphabet {
+  background-color: var(--color-brown);
+}
+
+.alpha_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.alpha_grid ul {
+  margin: 0.3rem;
+  padding: 0.2rem;
+  width: 5.0rem;
+  border: 1px white dashed;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alpha_grid ul:hover{
+  border: 1px solid;
+}
+
+.alpha_grid ul:active{
+  margin: 0.4rem;
+  padding: 0.1rem;
+}
+
+.alpha_grid h3 {
+  text-transform: none;
+}
+
+.alpha_grid ul p {
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
 }
 
 
