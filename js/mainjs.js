@@ -1,5 +1,6 @@
 var bin_score = 0;
 var fruit_score = 0;
+var close_score_timeout;
 
 function MainFunction() {
 
@@ -7,14 +8,8 @@ function MainFunction() {
   var menu_items = document.getElementsByClassName("menu_item");
   var btns = document.getElementsByClassName("menu_btn");
 
-  var current = document.getElementsByClassName("active");
-
   var menu = document.getElementById("side_menu");
-  var settings1 = document.getElementById("all_options");
-  var settings2 = document.getElementById("setting_tab");
 
-  var score = document.getElementById("score-container");
-  var close_score_timeout;
 
   // BINS
   var tr_imgs = document.getElementsByClassName("tr_img");
@@ -22,11 +17,6 @@ function MainFunction() {
   var blue_bin = document.getElementById("blue_bin");
   var green_bin = document.getElementById("green_bin");
 
-  var taxi = document.getElementById('taxi');
-
-
-
-  console.log("telos section: " + menu_items[2].className + " : " +(menu_items[2].offsetHeight + menu_items[2].offsetTop));
   
   window.onscroll = function () {
     
@@ -113,14 +103,20 @@ function MainFunction() {
     }
   }
 
+  // $("#metro_img").on("click",function(){
+  //   $("#modal").css("display", "block");
+  // });
+
+
 
   // --- MOVING CAR ---
   function MoveTaxi() {
 
-    var offset = taxi.offsetTop;
+    var offset = $("#taxi").offset().top;
     if ((pageYOffset <= offset + 0) && (pageYOffset >= offset - window.innerHeight + 0)) {
       var taxileft = (pageYOffset - offset + window.innerHeight - 0) * window.innerWidth / (window.innerHeight - 0);
-      taxi.style.left = taxileft + 'px';
+      $("#taxi").css("left",taxileft + 'px');
+
     }
   }
 
@@ -168,6 +164,14 @@ function MainFunction() {
     $("body").toggleClass("body_simpler_font");
     $("h1").toggleClass("h_simpler_font");
     $("h2").toggleClass("h_simpler_font");
+  });
+  $("#change_contrast").on("click",function(){
+    for(let menu_item of menu_items){
+      $(menu_item).toggleClass("black_bg");
+    }
+    $(".auto_bg").toggleClass("black_bg");
+    $(".header").toggleClass("black_bg");
+    $("body").toggleClass("black_bg");
   });
 
 
@@ -266,13 +270,12 @@ function MainFunction() {
 
   }
 
-
   function showScore(game) {
     var n = game+"_score";
     window[n] ++;
     document.getElementById(n).innerHTML = window[n];
     
-    score.style.display = "block";   
+    $("#score-container").css("display", "block");
     if (window[n] ==1) {
       var parentdiv = n+"_container";
       console.log(parentdiv);
@@ -282,7 +285,8 @@ function MainFunction() {
       clearTimeout(close_score_timeout);
     }
     close_score_timeout = setTimeout(function () {
-      score.style.display = "none";
+      $("#score-container").css("display", "none");
+
     }, 10000);
   }
 }

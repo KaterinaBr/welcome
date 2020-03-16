@@ -4,12 +4,12 @@
   --color-blue: #0894a1;
   --color-green: #4a923a;
   --color-yellow: #f2b134;
-  /* --color-orange: #ed553b; */
   --color-orange: #EF6414;
   --color-pink: #b51a59;
   --color-purple: #571845;
   --color-brown: #423119;
   --color-almost-white: #f0e1f0;
+  --color-black: #222222;
 
   --font-walter: 'Walter Turncoat', cursive;
   --font-indie: 'Indie Flower', cursive;
@@ -129,10 +129,10 @@ a:hover {
 
   
 }
-.abtn {
+/* .abtn { */
   /* margin: 2rem var(--margin-lr-sm); */
   /* display: grid; */
-}
+/* } */
 
 .space-m {
   height: var(--space-m);
@@ -147,6 +147,7 @@ a:hover {
 
 .my_container {
   min-height: 100vh;
+  transition: all 0.1s ease;
 }
 .inner_container {
   max-width: var(--max-width-full);
@@ -246,7 +247,7 @@ a:hover {
 /* --- SETTINGS --- */
 .settings {
   position: fixed;
-  bottom: 1rem;
+  bottom: 0.3rem;
   left: -80px;
   border-radius: 4px;
   z-index: 1;
@@ -299,6 +300,12 @@ cursor: pointer;
 
 .all_options div {
   height: 2rem;
+  margin: 0.5rem 0;
+
+}
+
+.black_bg {
+  background-color: var(--color-black) !important;
 }
 
 
@@ -331,7 +338,7 @@ cursor: pointer;
  /*--- WELCOME SECTION ---*/
 
 .welcome {
-  background-color: var(--color-darkblue);
+  /* background-color: var(--color-darkblue); */
 }
 .welcome h1 {
   padding: calc( 92vh / 2 - 4rem) var(--margin-lr-sm);
@@ -661,7 +668,7 @@ cursor: pointer;
 
 
 .bins:hover {
-  box-shadow: 0 0 19px #da9b22;
+  box-shadow: 0 0 20px #00000033;
   border-radius: 10px;
 }
 
@@ -673,9 +680,11 @@ cursor: pointer;
 }
 
 .alpha_grid {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   justify-content: center;
+  text-align: center;
+
 }
 
 .alpha_grid ul {
