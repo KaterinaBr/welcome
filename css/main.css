@@ -337,9 +337,9 @@ cursor: pointer;
 
  /*--- WELCOME SECTION ---*/
 
-.welcome {
+/* .welcome { */
   /* background-color: var(--color-darkblue); */
-}
+/* } */
 .welcome h1 {
   padding: calc( 92vh / 2 - 4rem) var(--margin-lr-sm);
 }
@@ -684,10 +684,12 @@ cursor: pointer;
   flex-wrap: wrap; */
   justify-content: center;
   text-align: center;
+  list-style: none;
+  padding: 0;
 
 }
 
-.alpha_grid ul {
+.alpha_grid li {
   margin: 0.3rem;
   padding: 0.2rem;
   width: 5.0rem;
@@ -696,11 +698,11 @@ cursor: pointer;
   cursor: pointer;
 }
 
-.alpha_grid ul:hover{
+.alpha_grid li:hover{
   border: 1px solid;
 }
 
-.alpha_grid ul:active{
+.alpha_grid li:active{
   margin: 0.4rem;
   padding: 0.1rem;
 }
@@ -709,7 +711,7 @@ cursor: pointer;
   text-transform: none;
 }
 
-.alpha_grid ul p {
+.alpha_grid li p {
   font-style: italic;
   margin-left: 0;
   margin-right: 0;

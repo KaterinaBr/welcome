@@ -1,5 +1,6 @@
 var bin_score = 0;
 var fruit_score = 0;
+var word_score = 0;
 var close_score_timeout;
 
 function MainFunction() {
@@ -30,7 +31,6 @@ function MainFunction() {
 
   };
 
-
   
   function OnscrollSetActive() {
     var screenheight = menu.offsetTop + (menu.offsetHeight/3);
@@ -54,7 +54,6 @@ function MainFunction() {
       $(btn).addClass("active");
     }
   }
-
 
   function OnscrollSetBg() {
     let things = $(".auto_bg");
@@ -84,6 +83,35 @@ function MainFunction() {
       counter = 0;
     }
   }, 1200);
+
+
+    // --- SETTINGS ---
+
+    $("#change_font").on("click",function(){
+      $("body").toggleClass("body_simpler_font");
+      $("h1").toggleClass("h_simpler_font");
+      $("h2").toggleClass("h_simpler_font");
+    });
+  
+    $("#change_contrast").on("click",function(){
+      for(let menu_item of menu_items){
+        $(menu_item).toggleClass("black_bg");
+      }
+      $(".auto_bg").toggleClass("black_bg");
+      $(".header").toggleClass("black_bg");
+      $("body").toggleClass("black_bg");
+    });
+  
+    $(".setting_tab").on("click", function() {
+      if ($(".settings").attr("state-open")=="true") {
+        $(".settings").attr("state-open",false);
+        $(".settings").animate({'left' : '-80px' },140);
+      }
+      else {
+        $(".settings").attr("state-open",true);
+        $(".settings").animate({'left' : '0px' },100);     
+      }
+    });
 
 
   // --- MODAL ---
@@ -119,6 +147,26 @@ function MainFunction() {
 
     }
   }
+
+  // --- CLICKING LETTERS ---
+
+  var letters_row="";
+
+   $(".letter_card").on("click", function(event){
+    let target_li = $(event.target)
+    if(!target_li.is("li")){
+      target_li = target_li.parent()
+    }
+    var letter = target_li.attr("letter");
+    letters_row +=letter;
+    if (letters_row.indexOf("ΚΑΛΗΜΕΡΑ")>-1){
+      showScore ("word");
+      letters_row = "";
+    }
+   });
+
+
+
 
   // --- EATING FRUITS --- 
   
@@ -158,33 +206,6 @@ function MainFunction() {
   });
 
 
-  // --- SETTINGS ---
-
-  $("#change_font").on("click",function(){
-    $("body").toggleClass("body_simpler_font");
-    $("h1").toggleClass("h_simpler_font");
-    $("h2").toggleClass("h_simpler_font");
-  });
-  $("#change_contrast").on("click",function(){
-    for(let menu_item of menu_items){
-      $(menu_item).toggleClass("black_bg");
-    }
-    $(".auto_bg").toggleClass("black_bg");
-    $(".header").toggleClass("black_bg");
-    $("body").toggleClass("black_bg");
-  });
-
-
-  $(".setting_tab").on("click", function() {
-    if ($(".settings").attr("state-open")=="true") {
-      $(".settings").attr("state-open",false);
-      $(".settings").animate({'left' : '-80px' },140);
-    }
-    else {
-      $(".settings").attr("state-open",true);
-      $(".settings").animate({'left' : '0px' },100);     
-    }
-  });
 
   // --- TRASH MINI GAME ---
 
