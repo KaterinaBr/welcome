@@ -597,6 +597,9 @@ cursor: pointer;
   background-color: var(--color-purple);
 }
 
+.other_fruits {
+  display: none;
+}
 
 .fruit_container img {
   width: 65%;

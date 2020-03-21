@@ -180,8 +180,6 @@ function MainFunction() {
    });
 
 
-
-
   // --- EATING FRUITS --- 
   
   $(".fruit_img").on("click",function(event){
