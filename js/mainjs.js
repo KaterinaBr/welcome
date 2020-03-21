@@ -100,6 +100,20 @@ function MainFunction() {
       $(".auto_bg").toggleClass("black_bg");
       $(".header").toggleClass("black_bg");
       $("body").toggleClass("black_bg");
+      $("body").css("font-size", "14px");
+    });
+    var f_s = 1;
+    $("#change_font-size").on("click",function(){
+      if (f_s == 1) {
+        $("body").css("font-size", "1.5rem");
+        f_s = 2;
+      } else if (f_s == 2) {
+        $("body").css("font-size", "1.1rem");
+        f_s = 3;
+      } else {
+        $("body").css("font-size", "1.3rem");
+        f_s = 1;
+      }
     });
   
     $(".setting_tab").on("click", function() {

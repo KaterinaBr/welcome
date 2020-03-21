@@ -341,7 +341,13 @@ cursor: pointer;
   /* background-color: var(--color-darkblue); */
 /* } */
 .welcome h1 {
-  padding: calc( 92vh / 2 - 4rem) var(--margin-lr-sm);
+  padding-top: calc((60vh - var(--font-size-l)) / 2) ;
+  padding-bottom: calc((40vh - var(--font-size-l)) / 2);
+}
+
+.welcome h2 {
+  padding-top: calc((24vh - var(--font-size-m)) / 2);
+  padding-bottom: calc((44vh - var(--font-size-m)) / 2);
 }
 
 .arrow_down {
@@ -747,6 +753,17 @@ cursor: pointer;
 
 
 @media only screen and (max-width: 600px) {
+
+  .welcome h1 {
+    padding-top: calc(60vh / 2 - var(--font-size-l)) ;
+    padding-bottom: calc(40vh / 2 - var(--font-size-l));
+  }
+  
+  .welcome h2 {
+    padding-top: calc(24vh / 2 - var(--font-size-m));
+    padding-bottom: calc(44vh / 2 - var(--font-size-m));
+  }
+  
   .score-container {
     top: 3.8rem;
   }
