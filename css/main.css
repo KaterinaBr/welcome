@@ -122,8 +122,8 @@ a {
 }
 
 a:hover {
-  color: var(--color-almost-white);
-  border: 1px solid var(--color-almost-white);
+  /* color: var(--color-almost-white); */
+  border: 1px solid #ffffffe3;
   border-radius: 4px;
   /* padding: 0.5rem; */
 
@@ -376,6 +376,25 @@ cursor: pointer;
 
 .btn_down:hover {
   border: none;
+}
+
+
+/*--- COVID-19 ---*/
+.covid-19 {
+  background-color: var(--color-yellow);
+}
+.masks-p {
+  text-align:left;
+}
+.covid_btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.covid_btns div {
+  min-width: 180px;
+  width: 29%;
+
 }
 
  /*--- TRANSPORT SECTION ---*/
@@ -831,6 +850,13 @@ cursor: pointer;
   }
   .gr_name {
     display: none;
+  }
+
+  /*--- COVID-19 SECTION ---*/
+
+  .covid_btns div {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   /*--- SHOPPING SECTION --- */
