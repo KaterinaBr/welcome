@@ -182,10 +182,11 @@ a:hover {
 .side_menu ul {
   list-style: none;
   padding: 0;
+  margin: 0.5rem 0px;
 }
-.side_menu li {
+/* .side_menu li {
   padding: 0.35rem 0;
-}
+} */
 
 .side_menu a:hover {
  border: none;
@@ -194,12 +195,13 @@ a:hover {
   border: none;
   transition: none;
   background-color: #00000000;
+  padding: 0.2rem 0.6rem 0.2rem;
 }
 
 .menu_icon {
   fill: white;
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   transition: all 0.2s ease;
 }
 
@@ -381,7 +383,7 @@ cursor: pointer;
 
 /*--- COVID-19 ---*/
 .covid-19 {
-  background-color: var(--color-yellow);
+  background-color: #5d1025;
 }
 .masks-p {
   text-align:left;
@@ -394,8 +396,19 @@ cursor: pointer;
 .covid_btns div {
   min-width: 180px;
   width: 29%;
-
 }
+.mask_img {
+  /* transform: translate(-25%, -5%) rotate(45deg); */
+  transform: translate(-15%, 5%) rotate(45deg);
+  height: 320px;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+/* .mask_img:hover {
+  transform: scale(1.1) translate(-15%, 5%) rotate(45deg) !important;
+} */
+
 
  /*--- TRANSPORT SECTION ---*/
 

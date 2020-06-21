@@ -1,26 +1,13 @@
 var bin_score = 0;
 var fruit_score = 0;
 var word_score = 0;
+var mask_score = 0;
 var close_score_timeout;
 
 function MainFunction() {
 
-// MENU 
-  var menu_items = document.getElementsByClassName("menu_item");
-  var btns = document.getElementsByClassName("menu_btn");
-
-  var menu = document.getElementById("side_menu");
-
-
-  // BINS
-  var tr_imgs = document.getElementsByClassName("tr_img");
-  var tr_blue = document.getElementsByClassName("btr");
-  var blue_bin = document.getElementById("blue_bin");
-  var green_bin = document.getElementById("green_bin");
-
   
   window.onscroll = function () {
-    
     // MENU --------
     OnscrollSetActive();
 
@@ -31,6 +18,9 @@ function MainFunction() {
 
   };
 
+  // --- MENU ---
+  var menu_items = document.getElementsByClassName("menu_item");
+  var menu = document.getElementById("side_menu");
   
   function OnscrollSetActive() {
     var screenheight = menu.offsetTop + (menu.offsetHeight/3);
@@ -42,7 +32,7 @@ function MainFunction() {
         var nextoffset = menu_items[i].offsetHeight + menu_items[i].offsetTop;
         if ((window.pageYOffset >= menu_items[i].offsetTop - screenheight) &&
           (window.pageYOffset < nextoffset - screenheight)) {
-          SetActive(btns[i]);
+          SetActive($(".menu_btn")[i]);
         }
       }
     }
@@ -74,10 +64,9 @@ function MainFunction() {
   // --- CHANGE WELCOME ---
   var text = ["Welcome to Greece", "Welcome to Athens", " Welcome to our place"];
   var counter = 0;
-  var elem = document.getElementById("changeText");
 
   window.setInterval(function () {
-    elem.innerHTML = text[counter];
+    $("#changeText").text(text[counter]);
     counter++;
     if (counter >= text.length) {
       counter = 0;
@@ -85,70 +74,98 @@ function MainFunction() {
   }, 1200);
 
 
-    // --- SETTINGS ---
+  // --- SETTINGS ---
+  $("#change_font").on("click",function(){
+    $("body").toggleClass("body_simpler_font");
+    $("h1").toggleClass("h_simpler_font");
+    $("h2").toggleClass("h_simpler_font");
+  });
+  $("#change_contrast").on("click",function(){
+    for(let menu_item of menu_items){
+      $(menu_item).toggleClass("black_bg");
+    }
+    $(".auto_bg").toggleClass("black_bg");
+    $(".header").toggleClass("black_bg");
+    $("body").toggleClass("black_bg");
+    // $("body").css("font-size", "14px");
+  });
+  var f_s = 1;
+  $("#change_font-size").on("click",function(){
+    if (f_s == 1) {
+      $("body").css("font-size", "1.5rem");
+      f_s = 2;
+    } else if (f_s == 2) {
+      $("body").css("font-size", "1.1rem");
+      f_s = 3;
+    } else {
+      $("body").css("font-size", "1.3rem");
+      f_s = 1;
+    }
+  });
+  $(".setting_tab").on("click", function() {
+    if ($(".settings").attr("state-open")=="true") {
+      $(".settings").attr("state-open",false);
+      $(".settings").animate({'left' : '-80px' },140);
+    }
+    else {
+      $(".settings").attr("state-open",true);
+      $(".settings").animate({'left' : '0px' },100);     
+    }
+  });
 
-    $("#change_font").on("click",function(){
-      $("body").toggleClass("body_simpler_font");
-      $("h1").toggleClass("h_simpler_font");
-      $("h2").toggleClass("h_simpler_font");
-    });
-  
-    $("#change_contrast").on("click",function(){
-      for(let menu_item of menu_items){
-        $(menu_item).toggleClass("black_bg");
+  // --- SHOW SCORE ---
+  function showScore(game) {
+    var n = game+"_score";
+    window[n] ++;
+    document.getElementById(n).innerHTML = window[n];
+    
+    $("#score-container").css("display", "block");
+    if (window[n] ==1) {
+      var parentdiv = n+"_container";
+      document.getElementById(parentdiv).style.display = "block";
+    }   
+    if (close_score_timeout) {
+      clearTimeout(close_score_timeout);
+    }
+    close_score_timeout = setTimeout(function () {
+      $("#score-container").css("display", "none");
+
+    }, 10000);
+  }
+
+
+  //  --- MASK MINI GAME --- 
+  var mask_up=false;
+  var mask_up_timeout;
+  $(".mask_img").on("click", function(event){
+    if (!mask_up) {
+      var mask = $(event.target);
+      mask.css("transform", "translate(2%,-15%)");
+      mask_up=true;
+      showScore ("mask");
+      if (mask_up_timeout) {
+        clearTimeout(mask_up_timeout);
       }
-      $(".auto_bg").toggleClass("black_bg");
-      $(".header").toggleClass("black_bg");
-      $("body").toggleClass("black_bg");
-      $("body").css("font-size", "14px");
-    });
-    var f_s = 1;
-    $("#change_font-size").on("click",function(){
-      if (f_s == 1) {
-        $("body").css("font-size", "1.5rem");
-        f_s = 2;
-      } else if (f_s == 2) {
-        $("body").css("font-size", "1.1rem");
-        f_s = 3;
-      } else {
-        $("body").css("font-size", "1.3rem");
-        f_s = 1;
-      }
-    });
-  
-    $(".setting_tab").on("click", function() {
-      if ($(".settings").attr("state-open")=="true") {
-        $(".settings").attr("state-open",false);
-        $(".settings").animate({'left' : '-80px' },140);
-      }
-      else {
-        $(".settings").attr("state-open",true);
-        $(".settings").animate({'left' : '0px' },100);     
-      }
-    });
+      mask_up_timeout = setTimeout(function () {
+        mask_up=false;
+        mask.css("transform", "translate(-15%, 5%) rotate(45deg)");
+      }, 8000);
+    }
+  });
 
 
   // --- MODAL ---
-  var modal = document.getElementById("mapModal");
-  var mdl_btn = document.getElementById("metro_img");
-  var mdl_span = document.getElementsByClassName("close")[0];
-
-  mdl_btn.onclick = function () {
-    modal.style.display = "block";
-  }
-  mdl_span.onclick = function () {
-    modal.style.display = "none";
-  }
   window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    if (event.target == document.getElementById("mapModal")) {
+      $("#mapModal").css("display", "none");
     }
   }
-
-  // $("#metro_img").on("click",function(){
-  //   $("#modal").css("display", "block");
-  // });
-
+  $("#metro_img").on("click", function(){
+    $("#mapModal").css("display", "block");
+  });
+  $(".close").on("click", function(){
+    $("#mapModal").css("display", "none");
+  });
 
 
   // --- MOVING CAR ---
@@ -162,10 +179,9 @@ function MainFunction() {
     }
   }
 
+
   // --- CLICKING LETTERS ---
-
   var letters_row="";
-
    $(".letter_card").on("click", function(event){
     let target_li = $(event.target)
     if(!target_li.is("li")){
@@ -181,9 +197,7 @@ function MainFunction() {
 
 
   // --- EATING FRUITS --- 
-  
   $(".fruit_img").on("click",function(event){
-    // console.log(event.target);
     var fruit = $(event.target);
       if ((fruit.attr("no")!=4)) {
       if (!fruit.attr("no")) {
@@ -198,7 +212,6 @@ function MainFunction() {
   
       var new_src = fruit.attr("src").split(".")[0].slice(0, -1) + fruit.attr("no") + ".png";
       fruit.attr("src",new_src);
-      console.log(fruit.attr("no"));
       
       if (fruit.attr("no") == 4) {
         showScore ("fruit");
@@ -218,11 +231,12 @@ function MainFunction() {
   });
 
 
-
   // --- TRASH MINI GAME ---
+  var tr_imgs = $(".tr_img");
+  var tr_blue = $(".btr");
 
-  blue_bin.addEventListener("click", showThing);
-  green_bin.addEventListener("click", showThing);
+  $("#blue_bin").on("click", showThing);
+  $("#green_bin").on("click", showThing);
 
   for (let i = 0; i < tr_imgs.length; i++) {
     tr_imgs[i].width = 50;
@@ -303,27 +317,7 @@ function MainFunction() {
 
   }
 
-  function showScore(game) {
-    var n = game+"_score";
-    window[n] ++;
-    document.getElementById(n).innerHTML = window[n];
-    
-    $("#score-container").css("display", "block");
-    if (window[n] ==1) {
-      var parentdiv = n+"_container";
-      console.log(parentdiv);
-      document.getElementById(parentdiv).style.display = "block";
-    }   
-    if (close_score_timeout) {
-      clearTimeout(close_score_timeout);
-    }
-    close_score_timeout = setTimeout(function () {
-      $("#score-container").css("display", "none");
-
-    }, 10000);
-  }
 }
-
 
 // $ (document).ready (function() {
 //     MainFunction();

@@ -198,12 +198,10 @@
       </symbol>
 
     </svg>
-
     <!-- <svg><use xlink:href="#car"/></svg> -->
 
     
     <!-- HEADER -->
-
     <header class="header my_container">
       <div class="welcome inner_container">
         <h1 id="changeText"> Welcome to Greece</h1>
@@ -216,16 +214,18 @@
       </div>
     </header>
 
-
     <div class="score-container auto_bg " id="score-container">
-      <div id="bin_score_container">
-        <span id="bin_score"> 0 </span> recycled item(s) 
+      <div id="mask_score_container">
+        <span id="mask_score"> 0 </span> masks used! 
+      </div>
+      <div id="word_score_container">
+        <span id="word_score">0</span> good morning(s)!
       </div>
       <div id="fruit_score_container">
         <span id="fruit_score">0</span> fruit(s) eaten
       </div>
-      <div id="word_score_container">
-        <span id="word_score">0</span> good morning(s)!
+      <div id="bin_score_container">
+        <span id="bin_score"> 0 </span> recycled item(s) 
       </div>
     </div>
 
@@ -289,6 +289,7 @@
       </div>
     </div>
 
+    <!--- COVID-19 SECTION --->
     <div class="covid-19 my_container menu_item" id="covid-19">
       <h1> Covid-19</h1>
       <div class="inner_container">
@@ -299,7 +300,7 @@
         <div class="covid_btns">
 
           <div class="abtn covid_btn">
-            <a target="_blank" href="https://covid19.gov.gr/covid19-live-analytics/">Update for covid-19 in Greece</a>
+            <a target="_blank" href="https://covid19.gov.gr/covid19-live-analytics/">Goverment released information</a>
           </div>
           <div class="abtn covid_btn">
             <a target="_blank" href="https://eody.gov.gr/en/">National Public Health Organization</a>
@@ -310,22 +311,25 @@
         </div>
           
         <h2> Masks</h2>
-        <p class="masks-p">
-          The use of the mask is <b>recommended</b>  when: <br>
-          - You are in a public transportation<br>
-          - You enter a health care provider
-          <br>
-          <br>
-          You can also wear it when:<br>
-          - You come in contact with the public (eg. banks, super-market etc)<br>
-          - You visit busy, closed spaces (eg. such as shops, grocery stores, malls, hospitals, beauty salons, etc.)
+        
+        <div class="flex_container col-2-cont cc2">
+          <p class="masks-p">
+            The use of the mask is <b>mandatory</b>  when: <br>
+            - You are in a public transportation<br>
+            - You enter a health care provider
+            <br>
+            <br>
+            The use of the mask is <b>recommended</b>  when: <br>
+            - You come in contact with the public (eg. banks, super-market etc)<br>
+            - You visit busy, closed spaces (eg. such as shops, grocery stores, malls, hospitals, beauty salons, etc.)
+          </p>
+          <img class="mask_img" src="img/mask.svg" alt="">
 
-        </p>
+        </div>
       </div>
       <!-- <div class="space-m"></div> -->
     </div> 
      
-
     <!-- TRANSPORT -->
     <div class="transport my_container menu_item" id="transport">
       <h1> Transport</h1>
