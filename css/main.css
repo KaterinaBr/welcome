@@ -750,6 +750,8 @@ cursor: pointer;
 
 .alpha_grid h3 {
   text-transform: none;
+  margin: 10px 0;
+  font-size: 1.5rem;
 }
 
 .alpha_grid li p {
@@ -757,6 +759,8 @@ cursor: pointer;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0.5rem;
+  opacity: 0.7;
+
 }
 
 
